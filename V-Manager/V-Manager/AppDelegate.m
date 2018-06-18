@@ -6,7 +6,6 @@
 //  Copyright © 2018年 com.tamigroup. All rights reserved.
 //
 
-//zheshiceshi
 
 #import "AppDelegate.h"
 
