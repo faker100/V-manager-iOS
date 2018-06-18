@@ -20,6 +20,9 @@
 + (AppDelegate*)instance;
 - (void)resetApplication;
 - (void)makeMeho;
+- (void)make1;
+- (void)make3;
+
 - (void)make2;
 @end
 
