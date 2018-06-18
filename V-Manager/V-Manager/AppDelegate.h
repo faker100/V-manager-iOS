@@ -29,5 +29,6 @@
 - (void)make5;
 
 - (void)make6;
+- (void)make8;
 @end
 
