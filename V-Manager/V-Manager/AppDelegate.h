@@ -24,5 +24,8 @@
 - (void)make3;
 
 - (void)make2;
+
+- (void)make4;
+
 @end
 
