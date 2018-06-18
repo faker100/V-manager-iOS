@@ -21,5 +21,7 @@
 - (void)resetApplication;
 - (void)makeMeho;
 - (void)make1;
+- (void)make3;
+
 @end
 
