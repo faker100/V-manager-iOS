@@ -21,8 +21,26 @@
 /* tableView */
 @property (nonatomic, strong) UITableView *tableView;
 
-/* dateStr */
-@property (nonatomic, strong) NSString *dateStr;
+/* 会场就绪*/
+@property (nonatomic, strong) NSString *monPlanDate;
+@property (nonatomic, strong) NSString *monTeaDate;
+@property (nonatomic, strong) NSString *monMeetLunchDate;
+@property (nonatomic, strong) NSString *monDiningLunchDate;
+
+@property (nonatomic, strong) NSString *aftPlanDate;
+@property (nonatomic, strong) NSString *aftTeaDate;
+@property (nonatomic, strong) NSString *aftMeetDinnerDate;
+@property (nonatomic, strong) NSString *aftDiningDinnerDate;
+
+@property (nonatomic, strong) NSString *nigPlanDate;
+@property (nonatomic, strong) NSString *nigTeaDate;
+@property (nonatomic, strong) NSString *nigMeetDinnerDate;
+@property (nonatomic, strong) NSString *nigDiningDinnerDate;
+
+@property (nonatomic, strong) NSString *addSecurityDate;
+@property (nonatomic, strong) NSString *flowersDisplayDate;
+@property (nonatomic, strong) NSString *receptionistDate;
+
 @end
 
 @implementation TMEditProcessViewController
@@ -119,10 +137,54 @@
         cell = [[TMEditProcessCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellID];
     }
     cell.imageView.image = [UIImage imageNamed:@"icon_首页"];
-    cell.textLabel.text = dataSource[indexPath.section][indexPath.row];;
-    cell.detailTextLabel.text = self.dateStr;
+    cell.textLabel.text = dataSource[indexPath.section][indexPath.row];
+    cell.detailTextLabel.text = [self methodWithIndexPath:indexPath];
     return cell;
 }
+
+- (NSString *)methodWithIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0 ) {
+        if (indexPath.row == 0) {
+            return self.monPlanDate;
+        } else if (indexPath.row == 1) {
+            return self.monTeaDate;
+        } else if (indexPath.row == 2) {
+            return self.monMeetLunchDate;
+        } else {
+            return self.monDiningLunchDate;
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            return self.aftPlanDate;
+        } else if (indexPath.row == 1) {
+            return self.aftTeaDate;
+        } else if (indexPath.row == 2) {
+            return self.aftMeetDinnerDate;
+        } else {
+            return self.aftDiningDinnerDate;
+        }
+    } else if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            return self.nigPlanDate;
+        } else if (indexPath.row == 1) {
+            return self.nigTeaDate;
+        } else if (indexPath.row == 2) {
+            return self.nigMeetDinnerDate;
+        } else {
+            return self.nigDiningDinnerDate;
+        }
+    } else {
+        if (indexPath.row == 0) {
+            return self.addSecurityDate;
+        } else if (indexPath.row == 1) {
+            return self.flowersDisplayDate;
+        }  else {
+            return self.receptionistDate;
+        }
+    }
+}
+
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
@@ -153,7 +215,7 @@
     }
     [button addSubview:_imgView];
     
-    UILabel *tlabel = [[UILabel alloc]initWithFrame:CGRectMake(45, (44-20)/2, 200, 20)];
+    UILabel *tlabel = [[UILabel alloc]initWithFrame:CGRectMake(15, (44-20)/2, 200, 20)];
     [tlabel setBackgroundColor:[UIColor clearColor]];
     [tlabel setFont:[UIFont systemFontOfSize:14]];
     [tlabel setText:sectionArray[section]];
@@ -163,7 +225,49 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDayHourMinute CompleteBlock:^(NSDate *selectDate) {
-        self.dateStr = [selectDate stringWithFormat:@"HH点mm分"];
+        
+        NSString *dateStr = [selectDate stringWithFormat:@"HH点mm分"];
+
+        if (indexPath.section == 0) {
+            if (indexPath.row == 0) {
+                self.monPlanDate = dateStr;
+            } else if (indexPath.row == 1) {
+                self.monTeaDate = dateStr;
+
+            } else if (indexPath.row == 2) {
+                self.monMeetLunchDate = dateStr;
+            } else {
+                self.monDiningLunchDate = dateStr;
+            }
+        } else if (indexPath.section == 1) {
+            if (indexPath.row == 0) {
+                self.aftPlanDate = dateStr;
+            } else if (indexPath.row == 1) {
+                self.aftTeaDate = dateStr;
+            } else if (indexPath.row == 2) {
+                self.aftMeetDinnerDate = dateStr;
+            } else {
+                self.aftMeetDinnerDate = dateStr;
+            }
+        } else if (indexPath.section == 2) {
+            if (indexPath.row == 0) {
+                self.nigPlanDate = dateStr;
+            } else if (indexPath.row == 1) {
+                self.nigTeaDate = dateStr;
+            } else if (indexPath.row == 2) {
+                self.nigMeetDinnerDate = dateStr;
+            } else {
+                self.nigDiningDinnerDate = dateStr;
+            }
+        } else {
+            if (indexPath.row == 0) {
+                self.addSecurityDate = dateStr;
+            } else if (indexPath.row == 1) {
+                self.flowersDisplayDate = dateStr;
+            } else {
+                self.receptionistDate = dateStr;
+            }
+        }
         //刷新某一固定的行
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     }];
@@ -171,14 +275,14 @@
     [datepicker show];
 }
 
-
-- (void)buttonPress:(UIButton *)sender//headButton点击
+//headButton点击
+- (void)buttonPress:(UIButton *)sender
 {
     //判断状态值
     if ([stateArray[sender.tag - 1] isEqualToString:@"1"]){
         //修改
         [stateArray replaceObjectAtIndex:sender.tag - 1 withObject:@"0"];
-    }else{
+    } else {
         [stateArray replaceObjectAtIndex:sender.tag - 1 withObject:@"1"];
     }
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:sender.tag-1] withRowAnimation:UITableViewRowAnimationAutomatic];
