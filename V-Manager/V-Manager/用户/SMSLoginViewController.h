@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface SMSLoginViewController : BaseViewController
-
+@property (weak, nonatomic) IBOutlet JKCountDownButton *getSMSBtn;
+@property (strong, nonatomic) IBOutlet UIButton *loginBtn;
+@property (strong,nonatomic) NSTimer *timer;
 @end

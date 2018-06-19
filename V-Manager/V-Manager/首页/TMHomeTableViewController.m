@@ -19,10 +19,22 @@
     
 
 }
-
+//合同金额
 @property (strong, nonatomic) IBOutlet UILabel *contractAmountLbl;
+//待付金额
 @property (strong, nonatomic) IBOutlet UILabel *waitAmountLbl;
+//共计
+@property (strong, nonatomic) IBOutlet UILabel *totalMeetingLbl;
+//已举办
+@property (strong, nonatomic) IBOutlet UILabel *closedLbl;
+//选择日期
 @property (strong, nonatomic) IBOutlet UIButton *choosePeriodBtn;
+//今日会议
+@property (strong, nonatomic) IBOutlet UILabel *todayCountLbl;
+//我的关注
+@property (strong, nonatomic) IBOutlet UILabel *myFollowCountLbl;
+//待办会议
+@property (strong, nonatomic) IBOutlet UILabel *waitCountLbl;
 
 - (IBAction)hideAmountBtnPressed:(UIButton *)sender;
 - (IBAction)choosePeriodBtnPressed:(UIButton *)sender;
@@ -57,7 +69,7 @@
     [self.tableView bringSubviewToFront:addMeetingBtn];
     buttonY=(int)addMeetingBtn.frame.origin.y;
    
-  
+    isShowAmount=YES;
 //
 //    [addView addSubview: addMeetingBtn];
       // [self.view bringSubviewToFront:addMeetingBtn];
@@ -166,11 +178,13 @@
     {
         self.contractAmountLbl.text=@"0.0";
         self.waitAmountLbl.text=@"0.0";
+        [self.hideAmountBtn setImage:[UIImage imageNamed:@"隐藏金额"] forState:UIControlStateNormal];
     }
     else
     {
         self.contractAmountLbl.text=@"******";
         self.waitAmountLbl.text=@"******";
+         [self.hideAmountBtn setImage:[UIImage imageNamed:@"显示金额"] forState:UIControlStateNormal];
     }
 }
 
@@ -187,7 +201,7 @@
     
     // Create the actions.
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        NSLog(@"The \"Okay/Cancel\" alert action sheet's cancel action occured.");
+       
     }];
     
     

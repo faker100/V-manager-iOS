@@ -6,8 +6,9 @@
 //  Copyright © 2018年 com.tamigroup. All rights reserved.
 //
 
-
 #import "AppDelegate.h"
+#import "WelcomeViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 /** 全局配置对象*/
@@ -34,20 +35,42 @@
     self.networkService.lock = NO;
     
     
-    //判断是否已登录 未登录跳转登录界面，已登录跳转首页
-    self.userInfo.token=nil;
-    if (self.userInfo.token==nil)
-    {
-        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"userStoryboard" bundle:nil] instantiateInitialViewController];
+    /**
+     * NSUserDefaults 可以存储数据类型（CGflot，NSInteger，BOOL等）和对象(NSData,NSArray,NSString,NSDictionary 等）
+     * 这里利用NSUserDefaults 设置一个bool值来判断是不是第一次运行
+     */
+    
+    //    [NSThread sleepForTimeInterval:5]; 延时操作
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"FirstRun"]) {
+        //如果是第一次运行就添加BOOL并赋值
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"FirstRun"];
+        //图片数据
+        NSArray *images = @[@"0.jpg",@"1.jpg",@"2.jpg",@"3.jpg"];
+        //初始化控制器
+        WelcomeViewController *welcomeVC =[[WelcomeViewController alloc]initWelcomeView:images firstVC:[[MainViewController alloc]init]];
+        //添加根控制器
+        self.window.rootViewController = welcomeVC;
+    }else{
+        //判断是否已登录 未登录跳转登录界面，已登录跳转首页
+        self.userInfo.token=nil;
+        if (self.userInfo.token==nil)
+        {
+            self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+            
+        }
+        else
+        {
+            self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+        }
         
     }
-    else
-    {
-        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
-    }
-    
+    //最前端显示window
+    [self.window makeKeyAndVisible];
     return YES;
 }
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -134,3 +157,4 @@
     self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
 }
 @end
+
