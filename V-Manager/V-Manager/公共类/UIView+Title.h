@@ -12,7 +12,7 @@ IB_DESIGNABLE
 
 
 @property (nonatomic, assign) IBInspectable NSUInteger cfpStyle;
-
 @property (nonatomic, strong) IBInspectable UIColor *normalColor;
 @property (nonatomic, strong) IBInspectable UIColor *highlightColor;
+
 @end

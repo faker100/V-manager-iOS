@@ -10,6 +10,8 @@
 		27590D0320D89F990070FBC2 /* TMMeetingGistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27590D0220D89F990070FBC2 /* TMMeetingGistCell.m */; };
 		27590D0620D8AEBB0070FBC2 /* TMMeetLinkWaitConfirmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27590D0520D8AEBB0070FBC2 /* TMMeetLinkWaitConfirmController.m */; };
 		27590D0920D8DCA30070FBC2 /* TMEnterMeetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27590D0820D8DCA30070FBC2 /* TMEnterMeetViewController.m */; };
+		27590D0C20D8EEEF0070FBC2 /* TMStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27590D0B20D8EEEF0070FBC2 /* TMStatusView.m */; };
+		27590D0F20D901E00070FBC2 /* TMHolderPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27590D0E20D901E00070FBC2 /* TMHolderPersonController.m */; };
 		27EDB18F20D0E2BD005AA581 /* MeetingGistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDB18E20D0E2BD005AA581 /* MeetingGistViewController.m */; };
 		27EDB19420D0F6AC005AA581 /* MeetingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDB19320D0F6AC005AA581 /* MeetingHeaderView.m */; };
 		27EDB19920D10ECF005AA581 /* TMHomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDB19620D10ECF005AA581 /* TMHomeTableView.m */; };
@@ -164,6 +166,10 @@
 		27590D0520D8AEBB0070FBC2 /* TMMeetLinkWaitConfirmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMeetLinkWaitConfirmController.m; sourceTree = "<group>"; };
 		27590D0720D8DCA30070FBC2 /* TMEnterMeetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMEnterMeetViewController.h; sourceTree = "<group>"; };
 		27590D0820D8DCA30070FBC2 /* TMEnterMeetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMEnterMeetViewController.m; sourceTree = "<group>"; };
+		27590D0A20D8EEEF0070FBC2 /* TMStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMStatusView.h; sourceTree = "<group>"; };
+		27590D0B20D8EEEF0070FBC2 /* TMStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMStatusView.m; sourceTree = "<group>"; };
+		27590D0D20D901E00070FBC2 /* TMHolderPersonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMHolderPersonController.h; sourceTree = "<group>"; };
+		27590D0E20D901E00070FBC2 /* TMHolderPersonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMHolderPersonController.m; sourceTree = "<group>"; };
 		27EDB18D20D0E2BD005AA581 /* MeetingGistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingGistViewController.h; sourceTree = "<group>"; };
 		27EDB18E20D0E2BD005AA581 /* MeetingGistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingGistViewController.m; sourceTree = "<group>"; };
 		27EDB19220D0F6AC005AA581 /* MeetingHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingHeaderView.h; sourceTree = "<group>"; };
@@ -465,6 +471,8 @@
 				27EDD82820D3C0F7005AA581 /* TMEditProcessCell.m */,
 				27590D0120D89F990070FBC2 /* TMMeetingGistCell.h */,
 				27590D0220D89F990070FBC2 /* TMMeetingGistCell.m */,
+				27590D0A20D8EEEF0070FBC2 /* TMStatusView.h */,
+				27590D0B20D8EEEF0070FBC2 /* TMStatusView.m */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -667,6 +675,8 @@
 				27590D0520D8AEBB0070FBC2 /* TMMeetLinkWaitConfirmController.m */,
 				27590D0720D8DCA30070FBC2 /* TMEnterMeetViewController.h */,
 				27590D0820D8DCA30070FBC2 /* TMEnterMeetViewController.m */,
+				27590D0D20D901E00070FBC2 /* TMHolderPersonController.h */,
+				27590D0E20D901E00070FBC2 /* TMHolderPersonController.m */,
 				27EDB19E20D208FC005AA581 /* TMMeetingContentAndGistViewController.h */,
 				27EDB19F20D208FC005AA581 /* TMMeetingContentAndGistViewController.m */,
 				27EDB1C020D26F1D005AA581 /* TMMeetingProcessViewController.h */,
@@ -1237,6 +1247,7 @@
 				CEB20CAE20CE648300ACE38A /* VPViewController.m in Sources */,
 				27EDB1D120D28A40005AA581 /* TMHomeTableViewController.m in Sources */,
 				CEB20C9120CE648300ACE38A /* XLPopMenuViewModel.m in Sources */,
+				27590D0F20D901E00070FBC2 /* TMHolderPersonController.m in Sources */,
 				27EDD82620D3BF3F005AA581 /* UIView+WSExtension.m in Sources */,
 				CEB20C8E20CE648300ACE38A /* PlannerButton.m in Sources */,
 				CEB20CA220CE648300ACE38A /* ImageContentView.m in Sources */,
@@ -1284,6 +1295,7 @@
 				CEB20C8D20CE648300ACE38A /* NSURLSession+CorrectedResumeData.m in Sources */,
 				CEB20C8420CE648300ACE38A /* CYDatetime.m in Sources */,
 				CEB20CB220CE648300ACE38A /* UIView+convenience.m in Sources */,
+				27590D0C20D8EEEF0070FBC2 /* TMStatusView.m in Sources */,
 				27590D0920D8DCA30070FBC2 /* TMEnterMeetViewController.m in Sources */,
 				27EDB1B920D24E4C005AA581 /* TMChatViewController.m in Sources */,
 				CEB20CA620CE648300ACE38A /* InputTextField.m in Sources */,
