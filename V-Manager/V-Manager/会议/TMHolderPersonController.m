@@ -8,7 +8,8 @@
 
 #import "TMHolderPersonController.h"
 
-@interface TMHolderPersonController ()
+@interface TMHolderPersonController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
@@ -37,9 +38,34 @@
     personNumL.textAlignment = NSTextAlignmentRight;
     [topView addSubview:personNumL];
     
-    
+    [self.view addSubview:self.collectionView];
     
 }
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        CGFloat  maxCol = 6;
+        CGFloat itemH = 60;
+        CGFloat margin = 8;
+        CGFloat itemW   = (kScreenW - (margin * (maxCol +1)))/maxCol;
+        layout.itemSize = CGSizeMake(itemW, itemH);
+        //minimumInteritemSpacing 设置同一列中间隔的cell最小间距。
+        layout.minimumInteritemSpacing = margin;
+        //minimumLineSpacing 设置最小行间距
+        layout.minimumLineSpacing      = margin;
+        layout.sectionInset = UIEdgeInsetsMake(0,margin,0, margin);
+        
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height) collectionViewLayout:layout];
+        
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor clearColor];
+        [_collectionView registerClass:[ZFilterCell class] forCellWithReuseIdentifier:[ZFilterCell identifer]];
+    }
+    return _collectionView;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
