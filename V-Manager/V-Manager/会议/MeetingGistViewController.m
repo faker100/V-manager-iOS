@@ -7,12 +7,14 @@
 //
 
 #import "MeetingGistViewController.h"
-#import <Masonry.h>
+//#import <Masonry.h>
 #import "MeetingHeaderView.h"
 #import "TMHeaderView.h"
 #import "TMHomeTableView.h"
 #import "TMMeetingContentAndGistViewController.h"
 #import "TMMeetingServerViewController.h"
+#import "TMMeetLinkWaitConfirmController.h"
+#import "TMEndMeetViewController.h"
 
 @interface MeetingGistViewController ()<UIScrollViewDelegate, TMBaseTableViewDelegate>
 
@@ -184,7 +186,7 @@
             [self.navigationController pushViewController:vc animated:YES];
         }];
         UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            TMMeetingServerViewController *vc = [TMMeetingServerViewController new];
+            TMEndMeetViewController *vc = [TMEndMeetViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }];
         [alert addAction:action1];
@@ -193,9 +195,11 @@
     }
 }
 
+
 #pragma mark - TMBaseTableViewDelegate
 - (void)toNextVC {
-    
+    TMMeetLinkWaitConfirmController *vc = [TMMeetLinkWaitConfirmController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

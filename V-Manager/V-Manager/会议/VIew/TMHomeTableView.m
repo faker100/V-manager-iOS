@@ -72,11 +72,15 @@
     } else {
         cell.imgView.image = [UIImage imageNamed:@"linemiddle"];
     }
+    [cell.statusBtn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)buttonClick:(UIButton *)button {
     [self.nextDelegate toNextVC];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

@@ -43,9 +43,10 @@
         [_statusBtn setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
         [_statusBtn setTitle:@"就绪" forState:UIControlStateNormal];
         [_statusBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_statusBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        //[_statusBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_statusBtn];
     }
+    
     return self;
 }
 
