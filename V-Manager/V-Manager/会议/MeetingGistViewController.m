@@ -7,12 +7,14 @@
 //
 
 #import "MeetingGistViewController.h"
-#import <Masonry.h>
+//#import <Masonry.h>
 #import "MeetingHeaderView.h"
 #import "TMHeaderView.h"
 #import "TMHomeTableView.h"
 #import "TMMeetingContentAndGistViewController.h"
 #import "TMMeetingServerViewController.h"
+#import "TMMeetLinkWaitConfirmController.h"
+#import "TMEnterMeetViewController.h"
 
 @interface MeetingGistViewController ()<UIScrollViewDelegate, TMBaseTableViewDelegate>
 
@@ -80,7 +82,7 @@
 
     self.navigationItem.title = @"会议概要";
     
-    self.a = 0;
+    self.a = 1;
     
     [self initViews];
 }
@@ -124,7 +126,6 @@
     [self.headerView.EOButton addTarget:self action:@selector(EOBtnAction:) forControlEvents:UIControlEventTouchUpInside];
   
     [editB addTarget:self action:@selector(createMeetProcess:) forControlEvents:UIControlEventTouchUpInside];
-
 }
 
 
@@ -185,7 +186,7 @@
             [self.navigationController pushViewController:vc animated:YES];
         }];
         UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            TMMeetingServerViewController *vc = [TMMeetingServerViewController new];
+            TMEnterMeetViewController *vc = [TMEnterMeetViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }];
         [alert addAction:action1];
@@ -194,9 +195,11 @@
     }
 }
 
+
 #pragma mark - TMBaseTableViewDelegate
 - (void)toNextVC {
-    
+    TMMeetLinkWaitConfirmController *vc = [TMMeetLinkWaitConfirmController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
