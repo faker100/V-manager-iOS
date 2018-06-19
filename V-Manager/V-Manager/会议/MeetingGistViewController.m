@@ -14,7 +14,7 @@
 #import "TMMeetingContentAndGistViewController.h"
 #import "TMMeetingServerViewController.h"
 #import "TMMeetLinkWaitConfirmController.h"
-#import "TMEndMeetViewController.h"
+#import "TMEnterMeetViewController.h"
 
 @interface MeetingGistViewController ()<UIScrollViewDelegate, TMBaseTableViewDelegate>
 
@@ -186,7 +186,7 @@
             [self.navigationController pushViewController:vc animated:YES];
         }];
         UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            TMEndMeetViewController *vc = [TMEndMeetViewController new];
+            TMEnterMeetViewController *vc = [TMEnterMeetViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }];
         [alert addAction:action1];

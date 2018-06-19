@@ -6,15 +6,15 @@
 //  Copyright © 2018年 com.tamigroup. All rights reserved.
 //
 
-#import "TMEndMeetViewController.h"
+#import "TMEnterMeetViewController.h"
 #import "MeetingHeaderView.h"
 
-@interface TMEndMeetViewController ()
+@interface TMEnterMeetViewController ()
 /* MeetingHeaderView.h */
 @property (nonatomic, strong) MeetingHeaderView *headerView;
 @end
 
-@implementation TMEndMeetViewController
+@implementation TMEnterMeetViewController
 #pragma mark - lazy
 - (MeetingHeaderView *)headerView {
     if (!_headerView) {
@@ -26,7 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"进入会议";
-    
+    [self initViews];
+}
+
+- (void)initViews {
+    [self.view addSubview:_headerView];
 }
 
 - (void)didReceiveMemoryWarning {
