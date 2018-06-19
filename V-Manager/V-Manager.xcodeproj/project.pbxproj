@@ -74,6 +74,16 @@
 		CE71FF2F20D9103A0041C766 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF2420D9103A0041C766 /* 3.jpg */; };
 		CE71FF3020D9103A0041C766 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF2520D9103A0041C766 /* Default.png */; };
 		CE71FF3120D9103A0041C766 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF2720D9103A0041C766 /* WelcomeViewController.m */; };
+		CE71FF3420D911460041C766 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF3220D911460041C766 /* AccountTableViewController.m */; };
+		CE71FF3920D911A70041C766 /* InputPhoneNoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF3620D911A60041C766 /* InputPhoneNoViewController.m */; };
+		CE71FF3A20D911A70041C766 /* InputSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF3820D911A70041C766 /* InputSMSViewController.m */; };
+		CE71FF3F20D911AF0041C766 /* UpdatePwdOKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF3B20D911AE0041C766 /* UpdatePwdOKViewController.m */; };
+		CE71FF4020D911AF0041C766 /* UpdatePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF3E20D911AF0041C766 /* UpdatePwdViewController.m */; };
+		CE71FF4320D911F80041C766 /* TMSearchKeywordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF4220D911F80041C766 /* TMSearchKeywordButton.m */; };
+		CE71FF4620D912380041C766 /* TMSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF4520D912380041C766 /* TMSearchTableViewController.m */; };
+		CE71FF4A20D912540041C766 /* JKCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF4920D912540041C766 /* JKCountDownButton.m */; };
+		CE71FF5020D912620041C766 /* MeetingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF4D20D912620041C766 /* MeetingListCell.m */; };
+		CE71FF5120D912620041C766 /* SearchMeetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF4F20D912620041C766 /* SearchMeetingCell.m */; };
 		CEB20C6520CE648200ACE38A /* AddImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB20B4120CE648200ACE38A /* AddImageView.m */; };
 		CEB20C6620CE648200ACE38A /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB20B4320CE648200ACE38A /* CALayer+XibConfiguration.m */; };
 		CEB20C7020CE648200ACE38A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB20B5320CE648200ACE38A /* Default.png */; };
@@ -289,6 +299,26 @@
 		CE71FF2520D9103A0041C766 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CE71FF2620D9103A0041C766 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		CE71FF2720D9103A0041C766 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		CE71FF3220D911460041C766 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewController.m; sourceTree = "<group>"; };
+		CE71FF3320D911460041C766 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableViewController.h; sourceTree = "<group>"; };
+		CE71FF3520D911A60041C766 /* InputPhoneNoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPhoneNoViewController.h; sourceTree = "<group>"; };
+		CE71FF3620D911A60041C766 /* InputPhoneNoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPhoneNoViewController.m; sourceTree = "<group>"; };
+		CE71FF3720D911A70041C766 /* InputSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputSMSViewController.h; sourceTree = "<group>"; };
+		CE71FF3820D911A70041C766 /* InputSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputSMSViewController.m; sourceTree = "<group>"; };
+		CE71FF3B20D911AE0041C766 /* UpdatePwdOKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePwdOKViewController.m; sourceTree = "<group>"; };
+		CE71FF3C20D911AE0041C766 /* UpdatePwdOKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePwdOKViewController.h; sourceTree = "<group>"; };
+		CE71FF3D20D911AE0041C766 /* UpdatePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePwdViewController.h; sourceTree = "<group>"; };
+		CE71FF3E20D911AF0041C766 /* UpdatePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePwdViewController.m; sourceTree = "<group>"; };
+		CE71FF4120D911F80041C766 /* TMSearchKeywordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSearchKeywordButton.h; sourceTree = "<group>"; };
+		CE71FF4220D911F80041C766 /* TMSearchKeywordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSearchKeywordButton.m; sourceTree = "<group>"; };
+		CE71FF4420D912370041C766 /* TMSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSearchTableViewController.h; sourceTree = "<group>"; };
+		CE71FF4520D912380041C766 /* TMSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSearchTableViewController.m; sourceTree = "<group>"; };
+		CE71FF4820D912540041C766 /* JKCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKCountDownButton.h; sourceTree = "<group>"; };
+		CE71FF4920D912540041C766 /* JKCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKCountDownButton.m; sourceTree = "<group>"; };
+		CE71FF4C20D912620041C766 /* MeetingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingListCell.h; sourceTree = "<group>"; };
+		CE71FF4D20D912620041C766 /* MeetingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingListCell.m; sourceTree = "<group>"; };
+		CE71FF4E20D912620041C766 /* SearchMeetingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMeetingCell.h; sourceTree = "<group>"; };
+		CE71FF4F20D912620041C766 /* SearchMeetingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMeetingCell.m; sourceTree = "<group>"; };
 		CEB20B3E20CE20B400ACE38A /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		CEB20B4020CE648200ACE38A /* AddImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageView.h; sourceTree = "<group>"; };
 		CEB20B4120CE648200ACE38A /* AddImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageView.m; sourceTree = "<group>"; };
@@ -511,6 +541,8 @@
 		27EDB1C920D28A15005AA581 /* 自定义类 */ = {
 			isa = PBXGroup;
 			children = (
+				CE71FF4120D911F80041C766 /* TMSearchKeywordButton.h */,
+				CE71FF4220D911F80041C766 /* TMSearchKeywordButton.m */,
 				27EDB1CA20D28A15005AA581 /* TMSaveButton.h */,
 				27EDB1CB20D28A15005AA581 /* TMSaveButton.m */,
 			);
@@ -530,6 +562,8 @@
 		27EDB1D320D28A84005AA581 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				CE71FF3320D911460041C766 /* AccountTableViewController.h */,
+				CE71FF3220D911460041C766 /* AccountTableViewController.m */,
 				27EDB1D420D28A84005AA581 /* mineStoryboard.storyboard */,
 				27EDB1D520D28A84005AA581 /* MineViewController.h */,
 				27EDB1D620D28A84005AA581 /* MineViewController.m */,
@@ -676,6 +710,9 @@
 		CE09421C20C53E54007E1D60 /* 会议 */ = {
 			isa = PBXGroup;
 			children = (
+				CE71FF4B20D912620041C766 /* Cell */,
+				CE71FF4420D912370041C766 /* TMSearchTableViewController.h */,
+				CE71FF4520D912380041C766 /* TMSearchTableViewController.m */,
 				27EDB19120D0E64B005AA581 /* Model */,
 				27EDB19020D0E644005AA581 /* VIew */,
 				27EDB1D920D28AF5005AA581 /* meetingStoryboard.storyboard */,
@@ -712,6 +749,14 @@
 		CE09421E20C53E61007E1D60 /* 用户 */ = {
 			isa = PBXGroup;
 			children = (
+				CE71FF3C20D911AE0041C766 /* UpdatePwdOKViewController.h */,
+				CE71FF3B20D911AE0041C766 /* UpdatePwdOKViewController.m */,
+				CE71FF3D20D911AE0041C766 /* UpdatePwdViewController.h */,
+				CE71FF3E20D911AF0041C766 /* UpdatePwdViewController.m */,
+				CE71FF3520D911A60041C766 /* InputPhoneNoViewController.h */,
+				CE71FF3620D911A60041C766 /* InputPhoneNoViewController.m */,
+				CE71FF3720D911A70041C766 /* InputSMSViewController.h */,
+				CE71FF3820D911A70041C766 /* InputSMSViewController.m */,
 				CE09422620C54434007E1D60 /* userStoryboard.storyboard */,
 				CE04847220CF8A21006497BE /* ForgotPwdViewController.h */,
 				CE04847320CF8A21006497BE /* ForgotPwdViewController.m */,
@@ -748,9 +793,30 @@
 			path = "程序起始页";
 			sourceTree = "<group>";
 		};
+		CE71FF4720D912540041C766 /* 获取短信验证码按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				CE71FF4820D912540041C766 /* JKCountDownButton.h */,
+				CE71FF4920D912540041C766 /* JKCountDownButton.m */,
+			);
+			path = "获取短信验证码按钮";
+			sourceTree = "<group>";
+		};
+		CE71FF4B20D912620041C766 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE71FF4C20D912620041C766 /* MeetingListCell.h */,
+				CE71FF4D20D912620041C766 /* MeetingListCell.m */,
+				CE71FF4E20D912620041C766 /* SearchMeetingCell.h */,
+				CE71FF4F20D912620041C766 /* SearchMeetingCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CEB20B3F20CE648200ACE38A /* 公共类 */ = {
 			isa = PBXGroup;
 			children = (
+				CE71FF4720D912540041C766 /* 获取短信验证码按钮 */,
 				27EDD81C20D3BF3F005AA581 /* WSDaePickerView */,
 				27EDB1AD20D24D4B005AA581 /* YZCSegment */,
 				CEB20CE620CE89D800ACE38A /* LjjUISegmentedControl */,
@@ -1308,6 +1374,7 @@
 				27EDB1E120D28AF8005AA581 /* MeetingListTableViewController.m in Sources */,
 				CEB20CAF20CE648300ACE38A /* NSDate+convenience.m in Sources */,
 				CEB20C7220CE648200ACE38A /* HDButton.m in Sources */,
+				CE71FF4020D911AF0041C766 /* UpdatePwdViewController.m in Sources */,
 				CE0941CC20C52E82007E1D60 /* ViewController.m in Sources */,
 				CEB20CAC20CE648300ACE38A /* ZKImgRunLoopView.m in Sources */,
 				27EDB1B320D24D4B005AA581 /* YZCViewController.m in Sources */,
@@ -1319,6 +1386,7 @@
 				CEB20CA020CE648300ACE38A /* UIView+Title.m in Sources */,
 				CEB20C9820CE648300ACE38A /* SCAvatarBrowser.m in Sources */,
 				CE09420420C52F9B007E1D60 /* VMUserInfo.m in Sources */,
+				CE71FF3F20D911AF0041C766 /* UpdatePwdOKViewController.m in Sources */,
 				CEB20C9020CE648300ACE38A /* XLPopMenuView.m in Sources */,
 				CEB20CAD20CE648300ACE38A /* VPImageCropperViewController.m in Sources */,
 				CEB20C9320CE648300ACE38A /* Reachability.m in Sources */,
@@ -1334,12 +1402,14 @@
 				CEB20C8420CE648300ACE38A /* CYDatetime.m in Sources */,
 				CEB20CB220CE648300ACE38A /* UIView+convenience.m in Sources */,
 				27590D0920D8DCA30070FBC2 /* TMEnterMeetViewController.m in Sources */,
+				CE71FF3420D911460041C766 /* AccountTableViewController.m in Sources */,
 				27EDB1B920D24E4C005AA581 /* TMChatViewController.m in Sources */,
 				CEB20CA620CE648300ACE38A /* InputTextField.m in Sources */,
 				CEB20CA120CE648300ACE38A /* CircleScrollView.m in Sources */,
 				CEB20CB320CE648300ACE38A /* VRGCalendarView.m in Sources */,
 				27EDB1BF20D24EA6005AA581 /* TMNoticeViewController.m in Sources */,
 				CE0941D720C52E82007E1D60 /* main.m in Sources */,
+				CE71FF4620D912380041C766 /* TMSearchTableViewController.m in Sources */,
 				CEB20C9D20CE648300ACE38A /* UINavigationBar+Awesome.m in Sources */,
 				CEB20CB620CE648300ACE38A /* CFPopView.m in Sources */,
 				27EDB1BC20D24E79005AA581 /* TMFeedbackViewController.m in Sources */,
@@ -1355,6 +1425,7 @@
 				CEB20C9920CE648300ACE38A /* TextFilter.m in Sources */,
 				27EDB19420D0F6AC005AA581 /* MeetingHeaderView.m in Sources */,
 				CEB20C8B20CE648300ACE38A /* NSString+N6Helper.m in Sources */,
+				CE71FF3A20D911A70041C766 /* InputSMSViewController.m in Sources */,
 				CEB20CAB20CE648300ACE38A /* UIView+ZKExtension.m in Sources */,
 				CE0941FE20C52F5F007E1D60 /* VMConfig.m in Sources */,
 				CEB20CE920CE89D800ACE38A /* LjjUISegmentedControl.m in Sources */,
@@ -1363,7 +1434,9 @@
 				27EDB19D20D112BC005AA581 /* UIView+Extension.m in Sources */,
 				CEB20C6620CE648200ACE38A /* CALayer+XibConfiguration.m in Sources */,
 				CEB20C7820CE648200ACE38A /* CollectionViewModel.m in Sources */,
+				CE71FF4A20D912540041C766 /* JKCountDownButton.m in Sources */,
 				CE04847D20CFAB44006497BE /* LoginRequest.m in Sources */,
+				CE71FF4320D911F80041C766 /* TMSearchKeywordButton.m in Sources */,
 				27EDB1B220D24D4B005AA581 /* YZCRandomViewController.m in Sources */,
 				27EDB1B620D24E29005AA581 /* TMMeetingInfoViewController.m in Sources */,
 				CEB20C9E20CE648300ACE38A /* UITabBar+badge.m in Sources */,
@@ -1373,11 +1446,13 @@
 				CEB20C9A20CE648300ACE38A /* UIButton+cfphelper.m in Sources */,
 				CEB20C9520CE648300ACE38A /* RLCommonUtility.m in Sources */,
 				CE09421620C53337007E1D60 /* MainViewController.m in Sources */,
+				CE71FF5020D912620041C766 /* MeetingListCell.m in Sources */,
 				CEB20C8720CE648300ACE38A /* N6ActionSheetController.m in Sources */,
 				27EDB1C520D27102005AA581 /* TMEditProcessViewController.m in Sources */,
 				CE09420B20C530D0007E1D60 /* MessageRequest.m in Sources */,
 				27EDD82A20D3C0F7005AA581 /* TMEditProcessCell.m in Sources */,
 				CE09420120C52F7F007E1D60 /* VMNetworkService.m in Sources */,
+				CE71FF3920D911A70041C766 /* InputPhoneNoViewController.m in Sources */,
 				CEB20C7E20CE648300ACE38A /* KNPhotoBrowerImageView.m in Sources */,
 				CEB20C8020CE648300ACE38A /* KNProgressHUD.m in Sources */,
 				CEB20C7A20CE648200ACE38A /* KNActionSheet.m in Sources */,
@@ -1385,6 +1460,7 @@
 				27EDD82720D3BF3F005AA581 /* WSDatePickerView.m in Sources */,
 				27EDB1C820D27A72005AA581 /* TMEditProcessHeaderView.m in Sources */,
 				CEB20C7720CE648200ACE38A /* CollectionViewCell.m in Sources */,
+				CE71FF5120D912620041C766 /* SearchMeetingCell.m in Sources */,
 				CEB20C9420CE648300ACE38A /* RLCheckButton.m in Sources */,
 				CE09420D20C530D0007E1D60 /* Message.m in Sources */,
 				27EDB1E220D28AF8005AA581 /* TMCreateMeetingTableViewController.m in Sources */,
@@ -1562,7 +1638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JKNA3NA62Q;
+				DEVELOPMENT_TEAM = YMX9Y9U2R6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/V-Manager/公共类/第三方/SMS_SDK",
@@ -1587,7 +1663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JKNA3NA62Q;
+				DEVELOPMENT_TEAM = YMX9Y9U2R6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/V-Manager/公共类/第三方/SMS_SDK",
