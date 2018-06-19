@@ -64,6 +64,16 @@
 		CE09421620C53337007E1D60 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09421520C53337007E1D60 /* MainViewController.m */; };
 		CE09421920C53646007E1D60 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09421820C53646007E1D60 /* MainNavigationController.m */; };
 		CE09422720C54434007E1D60 /* userStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE09422620C54434007E1D60 /* userStoryboard.storyboard */; };
+		CE71FF2820D9103A0041C766 /* 0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF1D20D9103A0041C766 /* 0.jpeg */; };
+		CE71FF2920D9103A0041C766 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF1E20D9103A0041C766 /* 0.jpg */; };
+		CE71FF2A20D9103A0041C766 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF1F20D9103A0041C766 /* 1.jpeg */; };
+		CE71FF2B20D9103A0041C766 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF2020D9103A0041C766 /* 1.jpg */; };
+		CE71FF2C20D9103A0041C766 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF2120D9103A0041C766 /* 2.jpeg */; };
+		CE71FF2D20D9103A0041C766 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF2220D9103A0041C766 /* 2.jpg */; };
+		CE71FF2E20D9103A0041C766 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF2320D9103A0041C766 /* 3.jpeg */; };
+		CE71FF2F20D9103A0041C766 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF2420D9103A0041C766 /* 3.jpg */; };
+		CE71FF3020D9103A0041C766 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71FF2520D9103A0041C766 /* Default.png */; };
+		CE71FF3120D9103A0041C766 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71FF2720D9103A0041C766 /* WelcomeViewController.m */; };
 		CEB20C6520CE648200ACE38A /* AddImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB20B4120CE648200ACE38A /* AddImageView.m */; };
 		CEB20C6620CE648200ACE38A /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB20B4320CE648200ACE38A /* CALayer+XibConfiguration.m */; };
 		CEB20C7020CE648200ACE38A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB20B5320CE648200ACE38A /* Default.png */; };
@@ -268,6 +278,17 @@
 		CE09421820C53646007E1D60 /* MainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		CE09421A20C538AD007E1D60 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CE09422620C54434007E1D60 /* userStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = userStoryboard.storyboard; sourceTree = "<group>"; };
+		CE71FF1D20D9103A0041C766 /* 0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpeg; sourceTree = "<group>"; };
+		CE71FF1E20D9103A0041C766 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		CE71FF1F20D9103A0041C766 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		CE71FF2020D9103A0041C766 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		CE71FF2120D9103A0041C766 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		CE71FF2220D9103A0041C766 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		CE71FF2320D9103A0041C766 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		CE71FF2420D9103A0041C766 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		CE71FF2520D9103A0041C766 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CE71FF2620D9103A0041C766 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		CE71FF2720D9103A0041C766 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		CEB20B3E20CE20B400ACE38A /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		CEB20B4020CE648200ACE38A /* AddImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageView.h; sourceTree = "<group>"; };
 		CEB20B4120CE648200ACE38A /* AddImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageView.m; sourceTree = "<group>"; };
@@ -563,6 +584,7 @@
 		CE0941C620C52E82007E1D60 /* V-Manager */ = {
 			isa = PBXGroup;
 			children = (
+				CE71FF1C20D9103A0041C766 /* 程序起始页 */,
 				27EDB1D320D28A84005AA581 /* 我的 */,
 				27EDB1CD20D28A40005AA581 /* 首页 */,
 				27EDB1C920D28A15005AA581 /* 自定义类 */,
@@ -706,6 +728,24 @@
 			children = (
 			);
 			path = "分享";
+			sourceTree = "<group>";
+		};
+		CE71FF1C20D9103A0041C766 /* 程序起始页 */ = {
+			isa = PBXGroup;
+			children = (
+				CE71FF1D20D9103A0041C766 /* 0.jpeg */,
+				CE71FF1E20D9103A0041C766 /* 0.jpg */,
+				CE71FF1F20D9103A0041C766 /* 1.jpeg */,
+				CE71FF2020D9103A0041C766 /* 1.jpg */,
+				CE71FF2120D9103A0041C766 /* 2.jpeg */,
+				CE71FF2220D9103A0041C766 /* 2.jpg */,
+				CE71FF2320D9103A0041C766 /* 3.jpeg */,
+				CE71FF2420D9103A0041C766 /* 3.jpg */,
+				CE71FF2520D9103A0041C766 /* Default.png */,
+				CE71FF2620D9103A0041C766 /* WelcomeViewController.h */,
+				CE71FF2720D9103A0041C766 /* WelcomeViewController.m */,
+			);
+			path = "程序起始页";
 			sourceTree = "<group>";
 		};
 		CEB20B3F20CE648200ACE38A /* 公共类 */ = {
@@ -1155,18 +1195,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE71FF2820D9103A0041C766 /* 0.jpeg in Resources */,
 				CEB20C7B20CE648200ACE38A /* KNPhotoBrower.bundle in Resources */,
+				CE71FF2D20D9103A0041C766 /* 2.jpg in Resources */,
 				27EDB1D720D28A84005AA581 /* mineStoryboard.storyboard in Resources */,
 				CE0941D420C52E82007E1D60 /* LaunchScreen.storyboard in Resources */,
+				CE71FF2920D9103A0041C766 /* 0.jpg in Resources */,
 				CEB20C7120CE648200ACE38A /* Default@2x.png in Resources */,
+				CE71FF2A20D9103A0041C766 /* 1.jpeg in Resources */,
+				CE71FF2C20D9103A0041C766 /* 2.jpeg in Resources */,
 				27EDB1E020D28AF8005AA581 /* meetingStoryboard.storyboard in Resources */,
 				CE0941D120C52E82007E1D60 /* Assets.xcassets in Resources */,
+				CE71FF2F20D9103A0041C766 /* 3.jpg in Resources */,
 				27EDB1D220D28A40005AA581 /* homeStoryboard.storyboard in Resources */,
+				CE71FF3020D9103A0041C766 /* Default.png in Resources */,
+				CE71FF2E20D9103A0041C766 /* 3.jpeg in Resources */,
 				CE09422720C54434007E1D60 /* userStoryboard.storyboard in Resources */,
 				27EDD82420D3BF3F005AA581 /* WSDatePickerView.xib in Resources */,
 				CEB20C7020CE648200ACE38A /* Default.png in Resources */,
 				CEB20CB720CE648300ACE38A /* CFPopView.xib in Resources */,
 				CE0941CF20C52E82007E1D60 /* Main.storyboard in Resources */,
+				CE71FF2B20D9103A0041C766 /* 1.jpg in Resources */,
 				CEB20C7320CE648200ACE38A /* HDButton.xib in Resources */,
 				CEB20C7920CE648200ACE38A /* KNActionSheet.bundle in Resources */,
 			);
@@ -1309,6 +1358,7 @@
 				CEB20CAB20CE648300ACE38A /* UIView+ZKExtension.m in Sources */,
 				CE0941FE20C52F5F007E1D60 /* VMConfig.m in Sources */,
 				CEB20CE920CE89D800ACE38A /* LjjUISegmentedControl.m in Sources */,
+				CE71FF3120D9103A0041C766 /* WelcomeViewController.m in Sources */,
 				CEB20C9220CE648300ACE38A /* XLPopMenuViewSingleton.m in Sources */,
 				27EDB19D20D112BC005AA581 /* UIView+Extension.m in Sources */,
 				CEB20C6620CE648200ACE38A /* CALayer+XibConfiguration.m in Sources */,
