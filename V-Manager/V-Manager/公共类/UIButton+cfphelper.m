@@ -65,7 +65,7 @@
     bgLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:bgLabel];
     
-    NSLog(@"self.frame.size.width = %f",self.frame.size.width);
+
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.width, self.frame.size.width, self.frame.size.height-self.frame.size.width)];
     titleLabel.font = Font9;

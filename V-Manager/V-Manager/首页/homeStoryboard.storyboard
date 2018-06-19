@@ -327,9 +327,14 @@
                     <navigationItem key="navigationItem" title="首页" id="B93-7V-pGr"/>
                     <connections>
                         <outlet property="choosePeriodBtn" destination="YSB-eG-ksA" id="Y93-6D-vzx"/>
+                        <outlet property="closedLbl" destination="aBR-ES-EKA" id="3B1-33-qxL"/>
                         <outlet property="contractAmountLbl" destination="0RC-Eg-cTi" id="Fyi-Pr-xR0"/>
                         <outlet property="hideAmountBtn" destination="lQi-y8-pSk" id="LMp-gj-hzR"/>
+                        <outlet property="myFollowCountLbl" destination="5FN-rC-LU0" id="kBV-tq-ifc"/>
+                        <outlet property="todayCountLbl" destination="k8p-Ru-Txv" id="v3u-0t-c7O"/>
+                        <outlet property="totalMeetingLbl" destination="HHu-dB-8Kp" id="8iR-R8-kxZ"/>
                         <outlet property="waitAmountLbl" destination="rUy-Uh-5mI" id="kmf-SR-uwa"/>
+                        <outlet property="waitCountLbl" destination="vKz-ke-K3K" id="HGh-YY-OIc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgK-TW-JSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -358,6 +363,6 @@
     </scenes>
     <resources>
         <image name="icon_美美圈_选中" width="24" height="24"/>
-        <image name="隐藏" width="100" height="100"/>
+        <image name="隐藏" width="200" height="200"/>
     </resources>
 </document>

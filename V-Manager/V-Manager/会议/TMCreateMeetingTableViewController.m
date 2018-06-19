@@ -7,6 +7,7 @@
 //
 
 #import "TMCreateMeetingTableViewController.h"
+#import "WSDatePickerView.h"
 
 @interface TMCreateMeetingTableViewController ()
 {
@@ -15,6 +16,12 @@
     //悬浮视图
     UIView  * saveView;
     int   buttonY;
+    IBOutlet UITextField *meetingNameTf;
+    IBOutlet UITextField *respPeopleTf;
+    IBOutlet UITextField *addressTf;
+    IBOutlet UITextField *startTimeTf;
+    IBOutlet UITextField *endTimeTf;
+    
 }
 @end
 
@@ -46,7 +53,8 @@
     [saveMeetingBtn addTarget:self action:@selector(saveMeeting) forControlEvents:UIControlEventTouchUpInside];
     [saveView addSubview:saveMeetingBtn];
     buttonY=(int)saveView.frame.origin.y;
-    
+     startTimeTf.enabled=NO;
+    endTimeTf.enabled=NO;
     
     //
     //    [addView addSubview: addMeetingBtn];
@@ -83,7 +91,54 @@
 }
 -(void)saveMeeting
 {
-    
+     if(meetingNameTf.text.length<=0)
+     {
+         [self showToastMessage:@"会议名称不可为空"];
+         return;
+     }
+    if(respPeopleTf.text.length<=0)
+    {
+        [self showToastMessage:@"负责人不可为空"];
+         return;
+    }
+    if(addressTf.text.length<=0)
+    {
+        [self showToastMessage:@"会议地点不可为空"];
+         return;
+    }
+    if(startTimeTf.text.length<=0)
+    {
+        [self showToastMessage:@"开始时间不可为空"];
+         return;
+    }
+    if(endTimeTf.text.length<=0)
+    {
+        [self showToastMessage:@"结束时间不可为空"];
+         return;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 3) {
+        
+        WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDayHourMinute CompleteBlock:^(NSDate *selectDate) {
+            
+            startTimeTf.text= [selectDate stringWithFormat:@"YYYY年 MM月 dd日 HH点mm分"];
+        }];
+        datepicker.hideBackgroundYearLabel = YES;
+        [datepicker show];
+    }
+    else if (indexPath.row == 4)
+    {
+        WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDayHourMinute CompleteBlock:^(NSDate *selectDate) {
+            
+            endTimeTf.text = [selectDate stringWithFormat:@"YYYY年 MM月 dd日 HH点mm分"];
+        }];
+        datepicker.hideBackgroundYearLabel = YES;
+        [datepicker show];
+        
+    }
+   
 }
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
