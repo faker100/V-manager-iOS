@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27590D0320D89F990070FBC2 /* TMMeetingGistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27590D0220D89F990070FBC2 /* TMMeetingGistCell.m */; };
 		27EDB18F20D0E2BD005AA581 /* MeetingGistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDB18E20D0E2BD005AA581 /* MeetingGistViewController.m */; };
 		27EDB19420D0F6AC005AA581 /* MeetingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDB19320D0F6AC005AA581 /* MeetingHeaderView.m */; };
 		27EDB19920D10ECF005AA581 /* TMHomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDB19620D10ECF005AA581 /* TMHomeTableView.m */; };
@@ -155,6 +156,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27590D0120D89F990070FBC2 /* TMMeetingGistCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMeetingGistCell.h; sourceTree = "<group>"; };
+		27590D0220D89F990070FBC2 /* TMMeetingGistCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMeetingGistCell.m; sourceTree = "<group>"; };
 		27EDB18D20D0E2BD005AA581 /* MeetingGistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingGistViewController.h; sourceTree = "<group>"; };
 		27EDB18E20D0E2BD005AA581 /* MeetingGistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingGistViewController.m; sourceTree = "<group>"; };
 		27EDB19220D0F6AC005AA581 /* MeetingHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingHeaderView.h; sourceTree = "<group>"; };
@@ -454,6 +457,8 @@
 				27EDB1C720D27A71005AA581 /* TMEditProcessHeaderView.m */,
 				27EDD82920D3C0F7005AA581 /* TMEditProcessCell.h */,
 				27EDD82820D3C0F7005AA581 /* TMEditProcessCell.m */,
+				27590D0120D89F990070FBC2 /* TMMeetingGistCell.h */,
+				27590D0220D89F990070FBC2 /* TMMeetingGistCell.m */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -1282,6 +1287,7 @@
 				CEB20C7F20CE648300ACE38A /* KNPhotoBrowerNumView.m in Sources */,
 				CE04847420CF8A21006497BE /* ForgotPwdViewController.m in Sources */,
 				CEB20C8320CE648300ACE38A /* CalcUtility.m in Sources */,
+				27590D0320D89F990070FBC2 /* TMMeetingGistCell.m in Sources */,
 				CEB20C8120CE648300ACE38A /* KNToast.m in Sources */,
 				CEB20C8A20CE648300ACE38A /* NSDate+N6Helper.m in Sources */,
 				CEB20CB520CE648300ACE38A /* CFFuncTableViewCell.m in Sources */,

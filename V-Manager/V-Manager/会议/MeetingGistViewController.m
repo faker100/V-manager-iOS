@@ -80,7 +80,7 @@
 
     self.navigationItem.title = @"会议概要";
     
-    self.a = 0;
+    self.a = 1;
     
     [self initViews];
 }
@@ -124,7 +124,6 @@
     [self.headerView.EOButton addTarget:self action:@selector(EOBtnAction:) forControlEvents:UIControlEventTouchUpInside];
   
     [editB addTarget:self action:@selector(createMeetProcess:) forControlEvents:UIControlEventTouchUpInside];
-
 }
 
 

@@ -8,14 +8,20 @@
 
 #import "TMHomeTableView.h"
 #import "TMHeaderView.h"
+#import "TMMeetingGistCell.h"
 
-@interface TMHomeTableView()<UITableViewDelegate, UITableViewDataSource>
+@interface TMHomeTableView()<UITableViewDelegate, UITableViewDataSource>{
+    NSMutableArray *stateArray;
+}
 
 @end
 
 @implementation TMHomeTableView
 
 - (void)setFunctionView:(TMHeaderView *)functionView {
+    
+    stateArray = [NSMutableArray arrayWithObjects:@"上午会场就绪",@"会议开始",@"茶歇就绪",@"餐厅午餐就绪", @"下午会场准备",@"会议开始",@"茶歇就绪",@"餐厅晚餐就绪",@"夜晚会场准备",@"会议开始",@"茶歇就绪",@"餐厅晚宴就绪就绪",nil];
+    
     _functionView = functionView;
     
     self.dataSource = self;
@@ -30,7 +36,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return stateArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -47,19 +53,25 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70;
+    return 44;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *reuseFirstTableViewCell = @"CellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseFirstTableViewCell];
+    static NSString *cellID = @"CellID";
+    TMMeetingGistCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseFirstTableViewCell];
-        cell.textLabel.font = [UIFont systemFontOfSize:14];
-        cell.textLabel.textColor = [UIColor orangeColor];
+        cell = [[TMMeetingGistCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"TableView:第%ld行", (long)indexPath.row];
+    
+    cell.titleL.text = stateArray[indexPath.row];
+    if (indexPath.row == 0) {
+        cell.imgView.image = [UIImage imageNamed:@"linestart"];
+    } else if (indexPath.row == stateArray.count-1) {
+        cell.imgView.image = [UIImage imageNamed:@"lineend"];
+    } else {
+        cell.imgView.image = [UIImage imageNamed:@"linemiddle"];
+    }
     return cell;
 }
 
