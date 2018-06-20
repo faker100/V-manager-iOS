@@ -119,28 +119,28 @@
     
 //    int index = 0;
 //    VMUserInfo *userInfo = [VMUserInfo shared];
-//    
+//
 //    if (userInfo.userId != nil) {
 //        return YES;
 //    }
-//    
+//
 //    for (; index < tabBarController.viewControllers.count; index++) {
 //        if (tabBarController.viewControllers[index] == viewController) {
 //            break;
 //        }
 //    }
 //
-//        
+//
 //    UIStoryboard *userStoryboard = [UIStoryboard storyboardWithName:@"userStoryboard" bundle:nil];
-//        
+//
 //    UIViewController *initialViewController = [userStoryboard instantiateInitialViewController];
 //    [tabBarController presentViewController:initialViewController
 //                                       animated:YES
 //                                     completion:nil];
-//        
+//
 //    return NO;
    
-    return YES;
+  return YES;
     
     
 }

@@ -57,7 +57,7 @@
         self.userInfo.token=nil;
         if (self.userInfo.token==nil)
         {
-            self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+            self.window.rootViewController = [[UIStoryboard storyboardWithName:@"userStoryboard" bundle:nil] instantiateInitialViewController];
             
         }
         else

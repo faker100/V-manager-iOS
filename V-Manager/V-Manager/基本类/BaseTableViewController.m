@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.config                  = [VMConfig shared];
+    self.userInfo                = [VMUserInfo shared];
+    self.networkService          = [VMNetworkService sharedService];
+    // self.localstorage          = [CFPLocalstorage Localstorage];
     [self setUpNavgationBar];
     [self setUpTableViewHeaderView];
     

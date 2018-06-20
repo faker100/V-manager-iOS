@@ -40,7 +40,7 @@
     personNumL.textAlignment = NSTextAlignmentRight;
     [topView addSubview:personNumL];
     
-    [self.view addSubview:self.collectionView];
+    //[self.view addSubview:self.collectionView];
     
     UIButton *editB = [UIButton buttonWithType:UIButtonTypeCustom];
     editB.tag = 101;

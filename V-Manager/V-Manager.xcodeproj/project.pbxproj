@@ -167,6 +167,8 @@
 		CEB20CB620CE648300ACE38A /* CFPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB20BF120CE648200ACE38A /* CFPopView.m */; };
 		CEB20CB720CE648300ACE38A /* CFPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB20BF220CE648200ACE38A /* CFPopView.xib */; };
 		CEB20CE920CE89D800ACE38A /* LjjUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB20CE820CE89D800ACE38A /* LjjUISegmentedControl.m */; };
+		CEE182E620DA370E005BACBD /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE182E420DA370D005BACBD /* CommonUtility.m */; };
+		CEE182EC20DA4FA5005BACBD /* MyCreatedMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE182EB20DA4FA5005BACBD /* MyCreatedMeetingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -490,6 +492,10 @@
 		CEB20BF220CE648200ACE38A /* CFPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFPopView.xib; sourceTree = "<group>"; };
 		CEB20CE720CE89D800ACE38A /* LjjUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LjjUISegmentedControl.h; sourceTree = "<group>"; };
 		CEB20CE820CE89D800ACE38A /* LjjUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LjjUISegmentedControl.m; sourceTree = "<group>"; };
+		CEE182E420DA370D005BACBD /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		CEE182E520DA370E005BACBD /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
+		CEE182EA20DA4FA5005BACBD /* MyCreatedMeetingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCreatedMeetingViewController.h; sourceTree = "<group>"; };
+		CEE182EB20DA4FA5005BACBD /* MyCreatedMeetingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCreatedMeetingViewController.m; sourceTree = "<group>"; };
 		E4B50897298A8F312017B341 /* Pods-V-Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V-Manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-V-Manager/Pods-V-Manager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -605,9 +611,11 @@
 		27EDB1D320D28A84005AA581 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				27EDB1D420D28A84005AA581 /* mineStoryboard.storyboard */,
 				CE71FF3320D911460041C766 /* AccountTableViewController.h */,
 				CE71FF3220D911460041C766 /* AccountTableViewController.m */,
-				27EDB1D420D28A84005AA581 /* mineStoryboard.storyboard */,
+				CEE182EA20DA4FA5005BACBD /* MyCreatedMeetingViewController.h */,
+				CEE182EB20DA4FA5005BACBD /* MyCreatedMeetingViewController.m */,
 				27EDB1D520D28A84005AA581 /* MineViewController.h */,
 				27EDB1D620D28A84005AA581 /* MineViewController.m */,
 			);
@@ -680,6 +688,8 @@
 				CE09421820C53646007E1D60 /* MainNavigationController.m */,
 				CE09421A20C538AD007E1D60 /* PrefixHeader.pch */,
 				CEB20B3E20CE20B400ACE38A /* Constant.h */,
+				CEE182E520DA370E005BACBD /* CommonUtility.h */,
+				CEE182E420DA370D005BACBD /* CommonUtility.m */,
 				CE0941CA20C52E82007E1D60 /* ViewController.h */,
 				CE0941CB20C52E82007E1D60 /* ViewController.m */,
 				CE0941CD20C52E82007E1D60 /* Main.storyboard */,
@@ -1437,6 +1447,7 @@
 				CEB20C9820CE648300ACE38A /* SCAvatarBrowser.m in Sources */,
 				CE09420420C52F9B007E1D60 /* VMUserInfo.m in Sources */,
 				CE71FF3F20D911AF0041C766 /* UpdatePwdOKViewController.m in Sources */,
+				CEE182E620DA370E005BACBD /* CommonUtility.m in Sources */,
 				CEB20C9020CE648300ACE38A /* XLPopMenuView.m in Sources */,
 				CEB20CAD20CE648300ACE38A /* VPImageCropperViewController.m in Sources */,
 				CEB20C9320CE648300ACE38A /* Reachability.m in Sources */,
@@ -1528,6 +1539,7 @@
 				CE0941C920C52E82007E1D60 /* AppDelegate.m in Sources */,
 				CEB20C8520CE648300ACE38A /* LunarCalendar.m in Sources */,
 				27EDB1C220D26F1D005AA581 /* TMMeetingProcessViewController.m in Sources */,
+				CEE182EC20DA4FA5005BACBD /* MyCreatedMeetingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

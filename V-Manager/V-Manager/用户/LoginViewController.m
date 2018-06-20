@@ -44,7 +44,7 @@
 
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
-  //  [self askUserInfo];
+            [self askUserInfo];
             self.userInfo.token=@"111111";
              AppDelegate *appDelegate = [AppDelegate instance];
              [appDelegate.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
@@ -60,7 +60,7 @@
     
  //   [SVProgressHUD showWithStatus:@"登录中..."];
     LoginRequest *request = [LoginRequest  new];
-    self.userInfo.userId=@"11";
+  //  self.userInfo.userId=@"11";
     request.mobile=@"13800138000";
     request.passWord=@"111111";
     @weakify(self);
