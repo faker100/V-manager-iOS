@@ -38,7 +38,7 @@
     personNumL.textAlignment = NSTextAlignmentRight;
     [topView addSubview:personNumL];
     
-    [self.view addSubview:self.collectionView];
+    //[self.view addSubview:self.collectionView];
     
 }
 
@@ -61,7 +61,7 @@
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor clearColor];
-        [_collectionView registerClass:[ZFilterCell class] forCellWithReuseIdentifier:[ZFilterCell identifer]];
+        //[_collectionView registerClass:[ZFilterCell class] forCellWithReuseIdentifier:[ZFilterCell identifer]];
     }
     return _collectionView;
 }

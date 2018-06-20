@@ -20,6 +20,7 @@ int             pageNo;
 BOOL            hasMore;
 NSString *      pageSize;
 int             KPageCount;
+    CGRect          viewFrame;
 
 }
 @property (strong, nonatomic) IBOutlet UIView *searchConfigView;
@@ -49,6 +50,8 @@ int             KPageCount;
 -(void)initUI
 {
     self.hidesBottomBarWhenPushed=YES;
+    //记录headerView 高度
+    viewFrame = self.searchConfigView.frame;
     [self.keywordBtn1.layer setBorderWidth:1];
     [self.keywordBtn1.layer setBorderColor:[[UIColor orangeColor] CGColor]];
     self.searchBar.placeholder=@"搜索会议名称";
@@ -163,22 +166,41 @@ int             KPageCount;
     
     
 }
-
+//查询时不显示view,取消就显示view
+-(void)showHeaderView:(bool)isShow
+{
+    if (isShow)
+    {
+        self.searchConfigView.frame = viewFrame;
+          self.searchConfigView.hidden=NO;
+    }
+    else
+    {
+        CGRect newFrame=CGRectMake(viewFrame.origin.x, viewFrame.origin.y, viewFrame.size.width, 0);
+        
+        self.searchConfigView.frame = newFrame;
+        self.searchConfigView.hidden=YES;
+        
+    }
+    [self.tableView setTableHeaderView:self.searchConfigView];
+}
 #pragma mark - Table view data source
+
 
 #pragma mark - UITableViewDataSource, Delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    //如果还有数据显示上拉刷新按钮
-    if (meetingList.count > 0 ) {
-        if (hasMore) {
-            return meetingList.count + 1;
-        } else {
-            return  meetingList.count;
-        }
-    } else {
-        return 0;
-    }
+//    //如果还有数据显示上拉刷新按钮
+//    if (meetingList.count > 0 ) {
+//        if (hasMore) {
+//            return meetingList.count + 1;
+//        } else {
+//            return  meetingList.count;
+//        }
+//    } else {
+//        return 0;
+//    }
+    return 2;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return  1;
@@ -187,19 +209,19 @@ int             KPageCount;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    if (indexPath.row < meetingList.count) {
-        SearchMeetingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell_meetinglist"];
+   // if (indexPath.row < meetingList.count) {
+        SearchMeetingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell_meeting"];
         
         return cell;
-    } else {
-        //上拉刷新
-        static NSString *CellIdentifier = @"cell_loading";
-        UITableViewCell  *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        cell.hidden=YES;
-        
-        return cell;
-    }
+//    } else {
+//        //上拉刷新
+//        static NSString *CellIdentifier = @"cell_loading";
+//        UITableViewCell  *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//        
+//        cell.hidden=YES;
+//        
+//        return cell;
+//    }
 }
 #pragma mark - UISearchBarDelegate
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
@@ -212,8 +234,8 @@ int             KPageCount;
     
     //隐藏config view ，显示tableView
     [self.searchBar resignFirstResponder];
-    self.searchConfigView.hidden=YES;
-    self.tableView.hidden=NO;
+    [self showHeaderView:NO];
+
     
     
     
@@ -223,9 +245,8 @@ int             KPageCount;
     [self.searchBar resignFirstResponder];
     //显示config view ，隐藏tableView
     [self.searchBar resignFirstResponder];
-    self.searchConfigView.hidden=NO;
-    self.tableView.hidden=YES;
-    
+   // self.searchConfigView.hidden=NO;
+      [self showHeaderView:YES];
 }
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
