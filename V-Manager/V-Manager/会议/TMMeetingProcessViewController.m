@@ -22,7 +22,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"会议流程";
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10+SafeAreaTop, kScreenW, 250) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10, kScreenW, 250) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];

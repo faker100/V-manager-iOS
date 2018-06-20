@@ -28,7 +28,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"会议服务内容及流程";
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10+SafeAreaTop, kScreenW, 250) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10, kScreenW, 250) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
@@ -78,10 +78,8 @@
         cell.detailTextLabel.text = self.personNum;
     } else if (indexPath.row == 2) {
         cell.textLabel.text = @"会议流程";
-        //cell.detailTextLabel.text = @"xxx";
     } else if (indexPath.row == 3) {
         cell.textLabel.text = @"VIP接待信息";
-        //cell.detailTextLabel.text = @"xxx";
     } else {
         cell.textLabel.text = @"会议是否重要";
         cell.accessoryType = UITableViewCellAccessoryNone;

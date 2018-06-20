@@ -41,24 +41,25 @@
 #pragma mark - lazy
 - (MeetingHeaderView *)headerView {
     if (!_headerView) {
-        _headerView = [[MeetingHeaderView alloc] initWithFrame:CGRectMake(0, SafeAreaTop, SCREEN_WIDTH, HeaderViewH)];
+        _headerView = [[MeetingHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, HeaderViewH)];
     }
     return _headerView;
 }
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[TMHomeTableView alloc] initWithFrame:self.mainScrollView.bounds style:UITableViewStyleGrouped];
+        _tableView = [[TMHomeTableView alloc] initWithFrame:self.mainScrollView.bounds style:UITableViewStylePlain];
         _tableView.tableFooterView = [UIView new];
         _tableView.functionView = self.functionView;
         _tableView.nextDelegate = self;
+        _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
 }
 
 - (UIScrollView *)mainScrollView {
     if (!_mainScrollView) {
-        _mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, SafeAreaTop+HeaderViewH, SCREEN_WIDTH, SCREEN_HEIGHT- SafeAreaTop -HeaderViewH)];
+        _mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, HeaderViewH, SCREEN_WIDTH, SCREEN_HEIGHT- SafeAreaTop -HeaderViewH-50)];
         _mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, 0);
         _mainScrollView.showsVerticalScrollIndicator = NO;
         _mainScrollView.delegate = self;
@@ -69,7 +70,7 @@
 
 - (TMHeaderView *)functionView {
     if (!_functionView) {
-        _functionView = [[TMHeaderView alloc] initWithFrame:CGRectMake(0, SafeAreaTop+HeaderViewH, SCREEN_WIDTH, 150)];
+        _functionView = [[TMHeaderView alloc] initWithFrame:CGRectMake(0, HeaderViewH, SCREEN_WIDTH, 150)];
         _functionView.itemHeight = 50;
         _functionView.backgroundColor = [UIColor redColor];
     }
@@ -89,13 +90,13 @@
 
 - (void)initViews {
     
-//    [self.view addSubview:self.mainScrollView];
-//    [self.view addSubview:self.functionView];
-//    [self.view addSubview:self.headerView];
-//    self.tabBarController.tabBar.hidden = YES;
+    //[self.view addSubview:self.mainScrollView];
+    //[self.view addSubview:self.functionView];
+    //[self.view addSubview:self.headerView];
+    //self.tabBarController.tabBar.hidden = YES;
 
     UIButton *editB = [UIButton buttonWithType:UIButtonTypeCustom];
-    editB.frame = CGRectMake(0, kScreenH-50, kScreenW, 50);
+    editB.frame = CGRectMake(0, kScreenH-50-SafeAreaTop, kScreenW, 50);
     editB.backgroundColor = kRGBColor(135, 135,135, 1);
     editB.titleLabel.font = Font12;
     [editB setTitleColor:kRGBColor(35, 35, 35, 1) forState:UIControlStateNormal];

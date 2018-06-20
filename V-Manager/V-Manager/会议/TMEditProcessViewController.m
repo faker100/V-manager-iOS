@@ -73,8 +73,8 @@
 }
 
 - (void)initViews {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, SafeAreaTop, kScreenW, 30)];
-    label.text = @"123";
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, kScreenW, 30)];
+    label.text = @"2018-6-20";
     label.textAlignment = NSTextAlignmentLeft;
     [self.view addSubview:label];
     
@@ -87,7 +87,7 @@
     _tableView.bounces = NO;
     
     UIButton *editB = [UIButton buttonWithType:UIButtonTypeCustom];
-    editB.frame = CGRectMake(0, kScreenH-50, kScreenW, 50);
+    editB.frame = CGRectMake(0, kScreenH-50-SafeAreaTop, kScreenW, 50);
     editB.backgroundColor = kRGBColor(135, 135,135, 1);
     editB.titleLabel.font = Font12;
     [editB setTitleColor:kRGBColor(35, 35, 35, 1) forState:UIControlStateNormal];

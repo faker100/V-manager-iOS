@@ -33,7 +33,7 @@
         _titleL.font = Font12;
        
         _statusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _statusBtn.frame = CGRectMake(self.width-50, (self.height-20)*0.5, 40, 20);
+        _statusBtn.frame = CGRectMake(kScreenW-50, (self.height-20)*0.5, 40, 20);
         _statusBtn.backgroundColor = [UIColor clearColor];
         _statusBtn.layer.masksToBounds = YES;
         _statusBtn.layer.cornerRadius = 3;

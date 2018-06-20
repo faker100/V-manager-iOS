@@ -10,8 +10,8 @@
 
 @interface TMMeetLinkWaitConfirmController ()
 
-/* personView */
-@property (nonatomic, strong) UIView *personView;
+/* bottomView */
+@property (nonatomic, strong) UIView *bottomView;
 
 @end
 
@@ -26,7 +26,7 @@
 }
 
 - (void)initViews {
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, SafeAreaTop, kScreenW, 40)];
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 40)];
     bgView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:bgView];
     
@@ -67,9 +67,10 @@
     
     
     
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 300, kScreenW, 40)];
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, addPerson.maxY+10, kScreenW, 40)];
     bottomView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:bottomView];
+    self.bottomView = bottomView;
     
     UILabel *troLable = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 80, bottomView.height)];
     [bottomView addSubview:troLable];
@@ -104,7 +105,8 @@
 
 - (void)btnClick:(UIButton *)button {
     //self.personView.height += 40;
-    button.y +=40;
+    button.y += 40;
+    self.bottomView.y += 40;
     
 }
 

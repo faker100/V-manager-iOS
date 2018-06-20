@@ -6,8 +6,9 @@
 //  Copyright © 2018年 com.tamigroup. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface TMChatViewController : BaseViewController
-
+@interface TMChatViewController : UIViewController
+/* titleH */
+@property (nonatomic, assign) CGFloat titleH;
 @end
