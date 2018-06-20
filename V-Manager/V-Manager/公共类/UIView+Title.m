@@ -30,6 +30,7 @@
     //    CGContextAddLineToPoint(context,self.frame.size.width-10, self.frame.size.height-50);
     
     CGContextStrokePath(context);
-    
 }
+
+
 @end
