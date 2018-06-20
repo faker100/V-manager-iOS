@@ -43,6 +43,12 @@
     
     //给imageView添加手势
     [_headPortraitImageV addGestureRecognizer:singleTap];
+    //读取本地头像
+    //将头像保存到本地
+    UIImage *headImage=[self.userInfo getHeadPortrait:@"headPortrait"];
+    if (headImage)
+     [_headPortraitImageV setImage:[self.userInfo getHeadPortrait:@"headPortrait"]];
+    
 }
 
 //  方法：alterHeadPortrait
@@ -87,9 +93,11 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     //定义一个newPhoto，用来存放我们选择的图片。
     UIImage *newPhoto = [info objectForKey:@"UIImagePickerControllerEditedImage"];
-    _headPortraitImageV.image = newPhoto;
+ //   _headPortraitImageV.image = newPhoto;
     //将头像保存到本地
-    [self.userinfo setHeadPortrait:newPhoto name:@"headPortrait"];
+    [self.userInfo setHeadPortrait:newPhoto name:@"headPortrait"];
+    UIImage *tempImage= [self.userInfo getHeadPortrait:@"headPortrait"];
+       _headPortraitImageV.image = tempImage;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

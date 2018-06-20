@@ -37,6 +37,7 @@
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.context
                                                        options:NSJSONWritingPrettyPrinted
                                                          error:nil];
+    NSString *jsonTest=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     return [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 

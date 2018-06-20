@@ -8,7 +8,7 @@
 
 #import "VMNetworkService.h"
 
-NSString * kVMMessageURI =@"http://192.168.103.104:8300/tm";
+NSString * kVMMessageURI =@"http://192.168.103.94:8300/tm";
 //NSString * kVMMessageURI =@"http://test.yundaoapp.com/yundao-api";
 
 NSString * endPoint = @"http://oss-cn-beijing.aliyuncs.com";
@@ -189,13 +189,15 @@ static double kDelayInSeconds = 0.25;
                 completion:(void (^)(MessageResponse * messageResponse, NSError *err))completion
 {
     
-    NSString *URLString = [NSString stringWithFormat:@"%@/%@/%@", kVMMessageURI, [[messageRequest class] RA_type],@"v1"];
+  NSString *URLString = [NSString stringWithFormat:@"%@/%@", kVMMessageURI, [[messageRequest class] RA_type]];
+  //  NSString *URLString = [NSString stringWithFormat:@"%@", kVMMessageURI];
     DDLogDebug(@"😁访问地址:%@", URLString);
-    // 初始化请求对象
+    // 初始化请求对
     NSMutableURLRequest *URLRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     DDLogDebug(@"😜发送报文:\n%@", [messageRequest toString]);
     // 设置请求头信息
     NSData *bodyData = [[messageRequest toString] dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *test=[messageRequest toString];
     [URLRequest setHTTPBody:bodyData];
     
     [URLRequest  addValue:[NSString stringWithFormat:@"%lu", (unsigned long)[bodyData length]]

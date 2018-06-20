@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseTableViewController : UITableViewController
-@property (nonatomic, weak) VMUserInfo*        userinfo;
+@property (nonatomic, weak) VMUserInfo*        userInfo;
 @property (nonatomic, weak) VMConfig*          config;
 @property (nonatomic, weak) VMNetworkService*  networkService;
 @property (nonatomic, copy) NSString*           networkAccessIdentifier;
