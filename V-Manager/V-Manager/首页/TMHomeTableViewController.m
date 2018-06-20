@@ -109,7 +109,7 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
     {
-        NSLog(@"%d",(int)addMeetingBtn.frame.origin.y);
+      //  NSLog(@"%d",(int)addMeetingBtn.frame.origin.y);
         addMeetingBtn.frame = CGRectMake(addMeetingBtn.frame.origin.x, buttonY+self.tableView.contentOffset.y , addMeetingBtn.frame.size.width, addMeetingBtn.frame.size.height);
     }
     

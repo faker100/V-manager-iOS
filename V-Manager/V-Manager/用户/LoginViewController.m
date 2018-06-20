@@ -81,6 +81,7 @@
          }
          
          LoginResponse *res = (LoginResponse *)messageResponse;
+         NSString * nickName=res.nickName;
 //         self.userInfo.nickName=res.nickName;
 //         self.userInfo.headImgUrl=res.headImgUrl;
 //         self.userInfo.token=res.token;
@@ -88,6 +89,7 @@
 //         AppDelegate *appDelegate = [AppDelegate instance];
 //         [appDelegate.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 //         [appDelegate resetApplication];
+         [self showToastMessage:[NSString stringWithFormat:@"%@:%@:%@",res.nickName,res.positionName,res.iconUrl]];
          
      }];
     

@@ -8,7 +8,7 @@
 
 #import "VMNetworkService.h"
 
-NSString * kVMMessageURI =@"http://192.168.103.94:8300/tm";
+NSString * kVMMessageURI =@"http://192.168.103.104:8080/apis/tm";
 //NSString * kVMMessageURI =@"http://test.yundaoapp.com/yundao-api";
 
 NSString * endPoint = @"http://oss-cn-beijing.aliyuncs.com";
