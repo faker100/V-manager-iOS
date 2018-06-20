@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSArray *titleArray;
 @property (nonatomic, strong) NSArray *controllerArray;
 
-
+@property (nonatomic, assign) CGFloat titleH;
+@property (nonatomic, strong) UIColor *titleC;
 @end

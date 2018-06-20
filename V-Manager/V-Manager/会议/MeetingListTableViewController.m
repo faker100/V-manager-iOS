@@ -150,21 +150,18 @@
 //        return cell;
 //    }
 //}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         MeetingGistViewController *vc = [MeetingGistViewController new];
+        self.tabBarController.tabBar.hidden = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
     else {
         TMMeetingContentAndGistViewController *vc = [TMMeetingContentAndGistViewController new];
+        self.tabBarController.tabBar.hidden = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
-    
-//    TMMeetingContentAndGistViewController *vc = [TMMeetingContentAndGistViewController new];
-//    [self.navigationController pushViewController:vc animated:YES];
-    
-//    MeetingGistViewController *vc = [MeetingGistViewController new];
-//    [self.navigationController pushViewController:vc animated:YES];
 }
 //读取会议信息
 - (void)getMeetingInfo

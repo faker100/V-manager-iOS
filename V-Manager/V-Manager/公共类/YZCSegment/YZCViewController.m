@@ -11,7 +11,6 @@
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 #define titleWidth SCREEN_WIDTH/_titleArray.count
-#define titleHeight 40
 #define backColor [UIColor colorWithWhite:0.300 alpha:1.000]
 
 #define iPhoneX  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -47,20 +46,20 @@
 
 - (void)initWithTitleButton
 {
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, titleHeight)];
-    titleView.backgroundColor = [UIColor colorWithWhite:0.800 alpha:1.000];
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, _titleH)];
+    titleView.backgroundColor = _titleC;
     [self.view addSubview:titleView];
   
     if (self.navigationController.navigationBar) {
-        titleView.frame = CGRectMake(0, SafeAreaTop, SCREEN_WIDTH, titleHeight);
+        titleView.frame = CGRectMake(0, 0, SCREEN_WIDTH, _titleH);
     }
     else {
-        titleView.frame = CGRectMake(0, 0, SCREEN_WIDTH, titleHeight);
+        titleView.frame = CGRectMake(0, 0, SCREEN_WIDTH, _titleH);
     }
     
     for (int i = 0; i < _titleArray.count; i++) {
         UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        titleButton.frame = CGRectMake(titleWidth*i, 0, titleWidth, titleHeight);
+        titleButton.frame = CGRectMake(titleWidth*i, 0, titleWidth, _titleH);
         [titleButton setTitle:_titleArray[i] forState:UIControlStateNormal];
         [titleButton setTitleColor:backColor forState:UIControlStateNormal];
         titleButton.tag = 100+i;
@@ -77,7 +76,7 @@
     }
     
     //滑块
-    _sliderView = [[UIView alloc]initWithFrame:CGRectMake(0, titleHeight-1, titleWidth, 1)];
+    _sliderView = [[UIView alloc]initWithFrame:CGRectMake(0, _titleH-1, titleWidth, 1)];
     _sliderView.backgroundColor = [UIColor redColor];
     [titleView addSubview:_sliderView];
 }
@@ -97,7 +96,7 @@
     selectButton = _buttonArray[index];
     [selectButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [UIView animateWithDuration:0.3 animations:^{
-        _sliderView.frame = CGRectMake(titleWidth*index, titleHeight-1, titleWidth, 1);
+        _sliderView.frame = CGRectMake(titleWidth*index, _titleH-1, titleWidth, 1);
 
     }];
 }
@@ -112,10 +111,12 @@
 - (void)initWithController
 {
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    scrollView.backgroundColor = [UIColor orangeColor];
+    
     if (self.navigationController.navigationBar) {
-        scrollView.frame = CGRectMake(0, titleHeight+SafeAreaTop, SCREEN_WIDTH, SCREEN_HEIGHT-titleHeight-SafeAreaTop);
+        scrollView.frame = CGRectMake(0, _titleH, SCREEN_WIDTH, SCREEN_HEIGHT-_titleH-SafeAreaTop);
     } else {
-        scrollView.frame = CGRectMake(0, titleHeight, SCREEN_WIDTH, SCREEN_HEIGHT-titleHeight);
+        scrollView.frame = CGRectMake(0, _titleH, SCREEN_WIDTH, SCREEN_HEIGHT-_titleH);
     }
     scrollView.delegate = self;
     scrollView.backgroundColor = [UIColor colorWithWhite:0.900 alpha:1.000];
@@ -129,7 +130,7 @@
         UIView *viewcon = [[UIView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         UIViewController *viewcontroller = _controllerArray[i];
         viewcon = viewcontroller.view;
-        viewcon.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        viewcon.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, scrollView.height);
 
         [scrollView addSubview:viewcon];
     }

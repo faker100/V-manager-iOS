@@ -6,8 +6,9 @@
 //  Copyright © 2018年 com.tamigroup. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface TMMeetingInfoViewController : BaseViewController
-
+@interface TMMeetingInfoViewController : UIViewController
+/* titleH */
+@property (nonatomic, assign) CGFloat titleH;
 @end

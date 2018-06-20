@@ -58,7 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellID = @"CellID";
+    NSString *cellID = [NSString stringWithFormat:@"CellID%ld", (long)indexPath.row];
     TMMeetingGistCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
         cell = [[TMMeetingGistCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
@@ -90,14 +90,14 @@
     
     //导航条的高度SafeAreaTop    
     if (offsetY >= 0 && offsetY <= placeHolderHeight) {
-        self.functionView.y = -offsetY+SafeAreaTop+HeaderViewH;
+        self.functionView.y = -offsetY+SafeAreaTop+HeaderViewH-SafeAreaTop;
     }
     else if (offsetY > placeHolderHeight) {
-        self.functionView.y = - placeHolderHeight+SafeAreaTop+HeaderViewH;
+        self.functionView.y = -placeHolderHeight+SafeAreaTop+HeaderViewH-SafeAreaTop;
     }
     else if (offsetY <0) {//下拉
         //self.headerView.y =  - offsetY+naviBarH;
-        self.functionView.y =  SafeAreaTop+HeaderViewH;
+        self.functionView.y =  SafeAreaTop+HeaderViewH-SafeAreaTop;
 
     }
 }

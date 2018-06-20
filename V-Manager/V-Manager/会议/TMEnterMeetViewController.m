@@ -23,7 +23,7 @@
 #pragma mark - lazy
 - (MeetingHeaderView *)headerView {
     if (!_headerView) {
-        _headerView = [[MeetingHeaderView alloc] initWithFrame:CGRectMake(0, SafeAreaTop, SCREEN_WIDTH, HeaderViewH)];
+        _headerView = [[MeetingHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, HeaderViewH)];
         _headerView.backgroundColor = [UIColor redColor];
     }
     return _headerView;
@@ -33,7 +33,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"进入会议";
     
-    stateArray = [NSMutableArray arrayWithObjects:@"上午会场就绪",@"会议开始",@"茶歇就绪",@"餐厅午餐就绪", @"下午会场准备",@"会议开始",@"茶歇就绪",@"餐厅晚餐就绪",@"夜晚会场准备",@"会议开始",@"茶歇就绪",@"餐厅晚宴就绪就绪",nil];
+    stateArray = [NSMutableArray arrayWithObjects:@"上午会场就绪",@"会议开始",@"茶歇就绪",@"餐厅午餐就绪", @"下午会场准备",@"会议开始",@"茶歇就绪",@"餐厅晚餐就绪",@"夜晚会场准备",@"会议开始",@"茶歇就绪",@"餐厅晚宴就绪",nil];
     
     [self initViews];
 }
@@ -41,7 +41,7 @@
 - (void)initViews {
     [self.view addSubview:self.headerView];
     
-    UIScrollView *sc = [[UIScrollView alloc] initWithFrame:CGRectMake(0, SafeAreaTop+HeaderViewH, kScreenW, 90)];
+    UIScrollView *sc = [[UIScrollView alloc] initWithFrame:CGRectMake(0, HeaderViewH, kScreenW, 90)];
     sc.contentSize = CGSizeMake(stateArray.count*90, 0);
     [self.view addSubview:sc];
     sc.backgroundColor = [UIColor whiteColor];
@@ -117,7 +117,7 @@
     
     
     
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenH-50, kScreenW, 50)];
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenH-50-SafeAreaTop, kScreenW, 50)];
     [self.view addSubview:bottomView];
     bottomView.backgroundColor = [UIColor whiteColor];
     

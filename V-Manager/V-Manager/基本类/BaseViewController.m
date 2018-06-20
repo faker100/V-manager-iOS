@@ -65,8 +65,7 @@
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:nil
                                                                             action:nil];
-    UIColor * color = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
-     [self.navigationController.navigationBar lt_setBackgroundColor:color];
+     [self.navigationController.navigationBar lt_setBackgroundColor:MenuColor];
 }
 - (BOOL)shouldAutorotateToInteFXaceOrientation:(UIInterfaceOrientation)inteFXaceOrientation
 {
