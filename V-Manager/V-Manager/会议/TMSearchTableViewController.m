@@ -20,7 +20,7 @@ int             pageNo;
 BOOL            hasMore;
 NSString *      pageSize;
 int             KPageCount;
-    CGRect          viewFrame;
+CGRect          viewFrame;
 
 }
 @property (strong, nonatomic) IBOutlet UIView *searchConfigView;
