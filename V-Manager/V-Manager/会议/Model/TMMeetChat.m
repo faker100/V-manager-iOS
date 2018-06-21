@@ -10,6 +10,7 @@
 
 @implementation TMMeetChat
 
+
 +(instancetype)creatModelwithImgName:(NSString *)imgName andName:(NSString *)name andContent:(NSString *)content {
     TMMeetChat *model = [TMMeetChat new];
     model.imgName = imgName;
