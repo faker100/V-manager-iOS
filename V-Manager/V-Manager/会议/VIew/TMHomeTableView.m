@@ -12,6 +12,7 @@
 
 @interface TMHomeTableView()<UITableViewDelegate, UITableViewDataSource>{
     NSMutableArray *stateArray;
+    NSMutableArray *statusArray;
 }
 
 @end
@@ -21,7 +22,7 @@
 - (void)setFunctionView:(TMHeaderView *)functionView {
     
     stateArray = [NSMutableArray arrayWithObjects:@"上午会场就绪",@"会议开始",@"茶歇就绪",@"餐厅午餐就绪", @"下午会场准备",@"会议开始",@"茶歇就绪",@"餐厅晚餐就绪",@"夜晚会场准备",@"会议开始",@"茶歇就绪",@"餐厅晚宴就绪就绪",nil];
-    
+    statusArray = [NSMutableArray arrayWithObjects:@"1",@"1",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",nil];
     _functionView = functionView;
     
     self.dataSource = self;
@@ -50,10 +51,9 @@
     return 0.01f;
 }
 
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,17 +64,20 @@
         cell = [[TMMeetingGistCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
+    cell.status = statusArray[indexPath.row];
     cell.titleL.text = stateArray[indexPath.row];
+    
     if (indexPath.row == 0) {
-        cell.imgView.image = [UIImage imageNamed:@"linestart"];
-    } else if (indexPath.row == stateArray.count-1) {
-        cell.imgView.image = [UIImage imageNamed:@"lineend"];
-    } else {
-        cell.imgView.image = [UIImage imageNamed:@"linemiddle"];
+        cell.upline.hidden = YES;
     }
+    if (indexPath.row == stateArray.count-1) {
+        cell.downline.hidden = YES;
+    }
+    
     [cell.statusBtn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
+
 
 - (void)buttonClick:(UIButton *)button {
     [self.nextDelegate toNextVC];

@@ -12,5 +12,4 @@
 
 @property (nonatomic, strong) UIButton *EOButton;
 
-//+ (UIView *)creatViewWithHeight:(CGFloat)height;
 @end

@@ -56,8 +56,8 @@
         _bgview = ({
             UIView *view = [[UIView alloc] init];
             view.size = CGSizeMake(100, 20);
-            view.backgroundColor = Color(220, 220, 220);
-            view.layer.cornerRadius = 3;
+            view.backgroundColor = Color(77, 141, 251);
+            view.layer.cornerRadius = 5;
             view.layer.masksToBounds = YES;
             view;
         });
@@ -66,7 +66,7 @@
             UILabel *label = [[UILabel alloc] init];
             label.textAlignment = NSTextAlignmentLeft;
             label.font = Font11;
-            label.textColor = [UIColor grayColor];
+            label.textColor = [UIColor whiteColor];
             label.numberOfLines = 0;
             label;
         });

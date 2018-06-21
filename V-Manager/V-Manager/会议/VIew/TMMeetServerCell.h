@@ -22,6 +22,9 @@
 /* dateLabel */
 @property (nonatomic, strong) UILabel *dateLabel;
 
+/* bgview */
+@property (nonatomic, strong) UIView *bgview;
+
 /* viewModel */
 @property (nonatomic, strong) TMMeetServerViewModel *viewModel;
 

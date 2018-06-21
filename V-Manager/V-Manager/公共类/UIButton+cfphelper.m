@@ -60,7 +60,7 @@
     
     UILabel *bgLabel = [[UILabel alloc] init];
     bgLabel.frame = imgView.frame;
-    bgLabel.font = Font16;
+    bgLabel.font = Font12;
     bgLabel.text = bgLabelName;
     bgLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:bgLabel];
@@ -68,11 +68,11 @@
 
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.width, self.frame.size.width, self.frame.size.height-self.frame.size.width)];
-    titleLabel.font = Font9;
+    titleLabel.font = Font12;
     titleLabel.text = titleName;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:titleLabel];
     
-    self.backgroundColor = [UIColor grayColor];
+    self.backgroundColor = [UIColor whiteColor];
 }
 @end

@@ -24,7 +24,7 @@
 - (MeetingHeaderView *)headerView {
     if (!_headerView) {
         _headerView = [[MeetingHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, HeaderViewH)];
-        _headerView.backgroundColor = [UIColor redColor];
+        _headerView.backgroundColor = MenuColor;
     }
     return _headerView;
 }
@@ -39,8 +39,11 @@
 }
 
 - (void)initViews {
-    [self.view addSubview:self.headerView];
     
+    [self.view addSubview:self.headerView];
+   
+    /***********************/
+  
     UIScrollView *sc = [[UIScrollView alloc] initWithFrame:CGRectMake(0, HeaderViewH, kScreenW, 90)];
     sc.contentSize = CGSizeMake(stateArray.count*90, 0);
     [self.view addSubview:sc];
@@ -59,6 +62,7 @@
         }
     }
     
+    /*********************/
     
     UIButton *serverBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(sc.frame)+10, kScreenW, 45)];
     serverBtn.backgroundColor = [UIColor whiteColor];
@@ -71,7 +75,7 @@
     
     UILabel *serverL = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(serverImg.frame)+5, 15, 100, 20)];
     serverL.text = @"会议服务群";
-    serverL.textColor = [UIColor grayColor];
+    serverL.textColor = [UIColor blackColor];
     serverL.font = Font11;
     serverL.textAlignment = NSTextAlignmentLeft;
     [serverBtn addSubview:serverL];
@@ -79,14 +83,14 @@
     
     UILabel *serverRightL = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-65, 12.5, 50, 20)];
     serverRightL.text = @"进入";
-    serverRightL.textColor = [UIColor grayColor];
+    serverRightL.textColor = kRGBColor(119, 168, 236, 1);
     serverRightL.font = Font11;
     serverRightL.textAlignment = NSTextAlignmentRight;
     [serverBtn addSubview:serverRightL];
     
     [serverBtn addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    
+    /********************/
     
     
     UIButton *personBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(serverBtn.frame)+1, kScreenW, 45)];
@@ -100,7 +104,7 @@
    
     UILabel *personL = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(personImg.frame)+5, 15, 100, 20)];
     personL.text = @"主办方成员";
-    personL.textColor = [UIColor grayColor];
+    personL.textColor = [UIColor blackColor];
     personL.font = Font11;
     personL.textAlignment = NSTextAlignmentLeft;
     [personBtn addSubview:personL];
@@ -108,14 +112,14 @@
     
     UILabel *personRightL = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-65, 12.5, 50, 20)];
     personRightL.text = @"查看";
-    personRightL.textColor = [UIColor grayColor];
+    personRightL.textColor = kRGBColor(119, 168, 236, 1);
     personRightL.font = Font11;
     personRightL.textAlignment = NSTextAlignmentRight;
     [personBtn addSubview:personRightL];
     
     [personBtn addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    
+    /***********************/
     
     UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenH-50-SafeAreaTop, kScreenW, 50)];
     [self.view addSubview:bottomView];

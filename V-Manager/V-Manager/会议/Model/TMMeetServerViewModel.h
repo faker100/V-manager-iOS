@@ -23,6 +23,7 @@
 
 @property (nonatomic ,assign) CGRect dateFrame;
 
+@property (nonatomic ,assign) CGRect bgviewFrame;
 
 /**
  *  cell高度

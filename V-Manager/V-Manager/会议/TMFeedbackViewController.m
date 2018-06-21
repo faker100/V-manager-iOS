@@ -68,7 +68,7 @@
     TMMeetServerCell *cell = [TMMeetServerCell TMMeetServerCellWithTableView:tableView];
 
     cell.viewModel = self.dataArrayFrames[indexPath.row];
-   
+    cell.bgview.hidden = YES;
     return cell;
 }
 

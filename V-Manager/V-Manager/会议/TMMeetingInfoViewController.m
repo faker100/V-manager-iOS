@@ -42,6 +42,7 @@
 - (MeetingHeaderView *)headerView {
     if (!_headerView) {
         _headerView = [[MeetingHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, HeaderViewH)];
+        _headerView.backgroundColor = MenuColor;
     }
     return _headerView;
 }

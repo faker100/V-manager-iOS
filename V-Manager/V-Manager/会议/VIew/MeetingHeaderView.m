@@ -47,50 +47,50 @@
 
 - (void)addChildView {
     
-    UIView *bgView = [[UIView alloc] initWithFrame:self.bounds];
-    bgView.backgroundColor =  [UIColor colorWithRed:119.5/255.0 green:119.5/255.0 blue:119.5/255.0 alpha:1];
-    [self addSubview:bgView];
+    //UIView *bgView = [[UIView alloc] initWithFrame:self.bounds];
+    //bgView.backgroundColor = _bgColor;
+    //[self addSubview:bgView];
     
     self.meetingLabel = [[UILabel alloc] init];
-    self.meetingLabel.textColor = [UIColor blackColor];
+    self.meetingLabel.textColor = [UIColor whiteColor];
     self.meetingLabel.textAlignment = NSTextAlignmentLeft;
-    self.meetingLabel.font = [UIFont systemFontOfSize:20];
+    self.meetingLabel.font = Font20;
     [self addSubview:self.meetingLabel];
     self.meetingLabel.text = @"2018中国绿公司年会";
 
     self.dateLabel = [[UILabel alloc] init];
-    self.dateLabel.textColor = kRGBColor(48, 48, 48, 1);
+    self.dateLabel.textColor = kRGBColor(220, 220, 220, 1);
     self.dateLabel.textAlignment = NSTextAlignmentLeft;
-    self.dateLabel.font = [UIFont systemFontOfSize:12];
+    self.dateLabel.font = Font12;
     [self addSubview:self.dateLabel];
     self.dateLabel.text = @"5月18日 9:00 - 17:00";
     
     self.positionLabel = [[UILabel alloc] init];
-    self.positionLabel.textColor = kRGBColor(48, 48, 48, 1);
+    self.positionLabel.textColor = kRGBColor(220, 220, 220, 1);
     self.positionLabel.textAlignment = NSTextAlignmentLeft;
-    self.positionLabel.font = [UIFont systemFontOfSize:12];
+    self.positionLabel.font = Font12;
     [self addSubview:self.positionLabel];
     self.positionLabel.text = @"红宾厅";
 
     self.personLabel = [[UILabel alloc] init];
-    self.personLabel.textColor = kRGBColor(48, 48, 48, 1);
+    self.personLabel.textColor = kRGBColor(220, 220, 220, 1);
     self.personLabel.textAlignment = NSTextAlignmentLeft;
-    self.personLabel.font = [UIFont systemFontOfSize:12];
+    self.personLabel.font = Font12;
     [self addSubview:self.personLabel];
     self.personLabel.text = @"张帅";
     
     
      _EOButton = [UIButton buttonWithType:UIButtonTypeCustom];
-     _EOButton.backgroundColor = kRGBColor(35, 35, 35, 1);
+     _EOButton.backgroundColor = kRGBColor(89, 102, 128, 1);
      _EOButton.layer.masksToBounds = YES;
      _EOButton.layer.cornerRadius = 5;
      [_EOButton setTitle:@"查看EO单" forState:UIControlStateNormal];
-     _EOButton.titleLabel.font = [UIFont systemFontOfSize:12];
+     _EOButton.titleLabel.font = Font12;
      [_EOButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self addSubview:_EOButton];
     
     UIView *bottomView = [[UIView alloc] init];
-    bottomView.backgroundColor = kRGBColor(0, 0, 0, 1);
+    bottomView.backgroundColor = kRGBColor(0, 0, 0, 0.2);
     [self addSubview:bottomView];
     
 
@@ -135,25 +135,25 @@
     }];
     
     self.expectedNumLabel = [[UILabel alloc] init];
-    self.expectedNumLabel.textColor = kRGBColor(48, 48, 48, 1);
+    self.expectedNumLabel.textColor = kRGBColor(220, 220, 220, 1);
     self.expectedNumLabel.textAlignment = NSTextAlignmentCenter;
     self.expectedNumLabel.font = [UIFont systemFontOfSize:16];
     [self addSubview:self.expectedNumLabel];
     
     self.expectedLabel = [[UILabel alloc] init];
-    self.expectedLabel.textColor = kRGBColor(48, 48, 48, 1);
+    self.expectedLabel.textColor = kRGBColor(220, 220, 220, 1);
     self.expectedLabel.textAlignment = NSTextAlignmentCenter;
     self.expectedLabel.font = [UIFont systemFontOfSize:10];
     [self addSubview:self.expectedLabel];
     
     self.keepNumLabel = [[UILabel alloc] init];
-    self.keepNumLabel.textColor = kRGBColor(48, 48, 48, 1);
+    self.keepNumLabel.textColor = kRGBColor(220, 220, 220, 1);
     self.keepNumLabel.textAlignment = NSTextAlignmentCenter;
     self.keepNumLabel.font = [UIFont systemFontOfSize:16];
     [self addSubview:self.keepNumLabel];
     
     self.keepLabel = [[UILabel alloc] init];
-    self.keepLabel.textColor = kRGBColor(48, 48, 48, 1);
+    self.keepLabel.textColor = kRGBColor(220, 220, 220, 1);
     self.keepLabel.textAlignment = NSTextAlignmentCenter;
     self.keepLabel.font = [UIFont systemFontOfSize:10];
     [self addSubview:self.keepLabel];
@@ -165,7 +165,7 @@
     [self addSubview:self.factNumLabel];
     
     self.factLabel = [[UILabel alloc] init];
-    self.factLabel.textColor = kRGBColor(48, 48, 48, 1);
+    self.factLabel.textColor = kRGBColor(220, 220, 220, 1);
     self.factLabel.textAlignment = NSTextAlignmentCenter;
     self.factLabel.font = [UIFont systemFontOfSize:10];
     [self addSubview:self.factLabel];

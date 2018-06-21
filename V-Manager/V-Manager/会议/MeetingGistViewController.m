@@ -42,6 +42,7 @@
 - (MeetingHeaderView *)headerView {
     if (!_headerView) {
         _headerView = [[MeetingHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, HeaderViewH)];
+        _headerView.backgroundColor = MenuColor;
     }
     return _headerView;
 }
@@ -72,7 +73,7 @@
     if (!_functionView) {
         _functionView = [[TMHeaderView alloc] initWithFrame:CGRectMake(0, HeaderViewH, SCREEN_WIDTH, 150)];
         _functionView.itemHeight = 50;
-        _functionView.backgroundColor = [UIColor redColor];
+        _functionView.backgroundColor = [UIColor whiteColor];
     }
     return _functionView;
 }
@@ -97,9 +98,9 @@
 
     UIButton *editB = [UIButton buttonWithType:UIButtonTypeCustom];
     editB.frame = CGRectMake(0, kScreenH-50-SafeAreaTop, kScreenW, 50);
-    editB.backgroundColor = kRGBColor(135, 135,135, 1);
+    editB.backgroundColor = [UIColor redColor];
     editB.titleLabel.font = Font12;
-    [editB setTitleColor:kRGBColor(35, 35, 35, 1) forState:UIControlStateNormal];
+    [editB setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     if(self.a) {
         [editB setTitle:@"进入会议" forState:UIControlStateNormal];
@@ -109,8 +110,16 @@
         [self.view addSubview:self.mainScrollView];
     } else {
         [editB setTitle:@"创建流程" forState:UIControlStateNormal];
-
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(editB.frame)-200, kScreenW, 50)];
+        label.text = @"请先创建会议活动流程";
+        label.font = Font15;
+        label.textColor = Color(200, 200, 200);
+        label.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:label];
+        
         self.functionView.bottomView.hidden = YES;
+        self.functionView.midView.backgroundColor = [UIColor whiteColor];
         self.functionView.height = 100;
     }
     
@@ -118,11 +127,13 @@
     [self.view addSubview:self.headerView];
     [self.view addSubview:editB];
 
-    [self.functionView.editBtn addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
+
     [self.functionView.PayBtn addTarget:self action:@selector(payAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.functionView.ideaBtn addTarget:self action:@selector(ideaAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.functionView.needChangeBtn addTarget:self action:@selector(needChangeAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.functionView.remindBtn addTarget:self action:@selector(remindAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.functionView.lookForBtn addTarget:self action:@selector(lookForAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.functionView.editBtn addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.headerView.EOButton addTarget:self action:@selector(EOBtnAction:) forControlEvents:UIControlEventTouchUpInside];
   
@@ -131,10 +142,12 @@
 
 
 #pragma mark - ButtonAction
+- (void)lookForAction:(UIButton *)button {
+    NSLog(@"0");
+}
 
 - (void)editAction:(UIButton *)button {
     NSLog(@"1");
-
 }
 
 - (void)payAction:(UIButton *)button {

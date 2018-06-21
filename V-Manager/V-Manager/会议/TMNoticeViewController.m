@@ -69,7 +69,6 @@
     TMMeetServerCell *cell = [TMMeetServerCell TMMeetServerCellWithTableView:tableView];
     
     cell.viewModel = self.dataArrayFrames[indexPath.row];
-    cell.contenLabel.backgroundColor = Color(225, 225, 225);
     return cell;
 }
 

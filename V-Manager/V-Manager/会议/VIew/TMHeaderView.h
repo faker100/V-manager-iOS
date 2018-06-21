@@ -15,6 +15,9 @@
 /* bottomView */
 @property (nonatomic, strong) UIView *bottomView;
 
+/* bottomView */
+@property (nonatomic, strong) UIView *midView;
+
 /* editBtn */
 @property (nonatomic, strong) UIButton *PayBtn;
 
@@ -26,6 +29,9 @@
 
 /* remindBtn */
 @property (nonatomic, strong) UIButton *remindBtn;
+
+/* lookForBtn */
+@property (nonatomic, strong) UIButton *lookForBtn;
 
 /* editBtn */
 @property (nonatomic, strong) UIButton *editBtn;

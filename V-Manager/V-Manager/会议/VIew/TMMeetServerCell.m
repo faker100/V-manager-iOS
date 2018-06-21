@@ -10,6 +10,10 @@
 #import "TMMeetServerViewModel.h"
 #import "TMMeetServer.h"
 
+@interface TMMeetServerCell ()
+
+@end
+
 @implementation TMMeetServerCell
 
 - (void)awakeFromNib {
@@ -47,7 +51,16 @@
             label.textColor = [UIColor blackColor];
             label;
         });
-
+        
+        _bgview = ({
+            UIView *view = [[UIView alloc] init];
+            view.size = CGSizeMake(100, 20);
+            view.backgroundColor = Color(220, 220, 220);
+            view.layer.cornerRadius = 3;
+            view.layer.masksToBounds = YES;
+            view;
+        });
+        
         _contenLabel = ({
             UILabel *label = [[UILabel alloc] init];
             label.textAlignment = NSTextAlignmentLeft;
@@ -67,6 +80,7 @@
         
         [self.contentView addSubview:_imgView];
         [self.contentView addSubview:_nameLabel];
+        [self.contentView addSubview:_bgview];
         [self.contentView addSubview:_contenLabel];
         [self.contentView addSubview:_dateLabel];
 
@@ -104,6 +118,7 @@
     self.imgView.frame = viewModel.imgViewFrame;
     self.nameLabel.frame = viewModel.nameFrame;
     self.dateLabel.frame = viewModel.dateFrame;
+    self.bgview.frame = viewModel.bgviewFrame;
     self.contenLabel.frame = viewModel.contentFrame;
     
     self.imgView.image = [UIImage imageNamed:viewModel.model.imgName];

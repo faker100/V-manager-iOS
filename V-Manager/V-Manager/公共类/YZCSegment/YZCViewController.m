@@ -97,7 +97,6 @@
     [selectButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [UIView animateWithDuration:0.3 animations:^{
         _sliderView.frame = CGRectMake(titleWidth*index, _titleH-1, titleWidth, 1);
-
     }];
 }
 
@@ -106,6 +105,17 @@
 {
     NSInteger index = scrollView.contentOffset.x / SCREEN_WIDTH;
     [self selectButton:index];
+  
+    //NSLog(@"scrollView.contentOffset.x = %lf",scrollView.contentOffset.x);
+  
+    //处理键盘事件
+    CGFloat contentX = scrollView.contentOffset.x;
+    if (contentX == 0 ||contentX == 2*SCREEN_WIDTH || contentX == 3*SCREEN_WIDTH) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"keyboardDis" object:self];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
 }
 
 - (void)initWithController

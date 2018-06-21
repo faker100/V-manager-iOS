@@ -12,11 +12,17 @@
 /* imgView */
 @property (nonatomic, strong) UIImageView *imgView;
 
-/* titleLabel */
+@property (nonatomic, strong) UILabel *upline;
+
+@property (nonatomic, strong) UILabel *downline;
+
+/* upline */
 @property (nonatomic, strong) UILabel *titleL;
 
 /* statusBtn */
 @property (nonatomic, strong) UIButton *statusBtn;
 
+/* status */
+@property (nonatomic, strong) NSString *status;
 
 @end
