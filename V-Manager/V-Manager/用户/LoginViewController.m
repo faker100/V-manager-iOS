@@ -21,6 +21,10 @@
  
     // Do any additional setup after loading the view.
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -40,6 +44,14 @@
 {
     self.mobileTextField.text=@"13800138000";
     self.passWordTextField.text=@"111111";
+    
+    UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT)];
+    
+    [bgImgView  setImage:[UIImage imageNamed:@"0.jpeg"]];
+    
+    [self.view addSubview:bgImgView];
+    
+    [self.view  sendSubviewToBack:bgImgView];
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender

@@ -1698,7 +1698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CUG4748QPR;
+				DEVELOPMENT_TEAM = YMX9Y9U2R6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/V-Manager/公共类/第三方/SMS_SDK",
@@ -1723,7 +1723,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CUG4748QPR;
+				DEVELOPMENT_TEAM = YMX9Y9U2R6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/V-Manager/公共类/第三方/SMS_SDK",
