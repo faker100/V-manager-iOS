@@ -17,6 +17,8 @@
 @interface MainViewControllerDelegate : NSObject <UITabBarControllerDelegate>
 
 + (MainViewControllerDelegate *)staticInstance;
+
 @property(nonatomic,strong) UINavigationController *mine;
-+(void)configViewControllers ;
+
+//+(void)configViewControllers ;
 @end

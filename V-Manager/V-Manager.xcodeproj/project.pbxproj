@@ -598,8 +598,8 @@
 		27EDB1CD20D28A40005AA581 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
-				27EDB1CE20D28A40005AA581 /* TMHomeTableViewController.m */,
 				27EDB1CF20D28A40005AA581 /* homeStoryboard.storyboard */,
+				27EDB1CE20D28A40005AA581 /* TMHomeTableViewController.m */,
 				27EDB1D020D28A40005AA581 /* TMHomeTableViewController.h */,
 			);
 			path = "首页";

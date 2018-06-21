@@ -25,7 +25,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-      [self configViewControllers];
+    
+    [self configViewControllers];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,54 +41,37 @@
     //首页
     UIStoryboard *homeStoryboard = [UIStoryboard storyboardWithName:@"homeStoryboard" bundle:nil];
     UINavigationController *homeVC = [homeStoryboard instantiateInitialViewController];
-    
-    homeVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"首页"
-                                                       image:[UIImage imageNamed:@"icon_首页_选中"]
-                                               selectedImage:nil];
-    homeVC.tabBarItem.image = [[UIImage imageNamed:@"icon_首页"]
-                                 imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    homeVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_首页_选中"]
-                                         imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    //mainVC.navigationBar.barTintColor = MenuColor;
+    homeVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"首页" image:[UIImage imageNamed:@"tab-home-pre"] selectedImage:nil];
+    homeVC.tabBarItem.image = [[UIImage imageNamed:@"tab-home-nor"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    homeVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab-home-pre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    homeVC.navigationBar.barTintColor = MenuColor;
     
     
-    // 会议
-   
+    //会议
     UIStoryboard *meetingStoryboard = [UIStoryboard storyboardWithName:@"meetingStoryboard" bundle:nil];
     UINavigationController *meetingVC = [meetingStoryboard instantiateInitialViewController];
-    
-    meetingVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"会议"
-                                                     image:[UIImage imageNamed:@"icon_会议列表_选中"]
-                                             selectedImage:nil];
-    meetingVC.tabBarItem.image = [[UIImage imageNamed:@"icon_会议列表"]
-                               imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    meetingVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_会议列表_选中"]
-                                       imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    meetingVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"会议" image:[UIImage imageNamed:@"tab-meeting-nor"] selectedImage:nil];
+    meetingVC.tabBarItem.image = [[UIImage imageNamed:@"tab-meeting-nor"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    meetingVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab-meeting-pre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     //我的
-      meetingVC.tabBarController.tabBar.tintColor = MenuColor;
-   
     UIStoryboard *mineStoryboard = [UIStoryboard storyboardWithName:@"mineStoryboard" bundle:nil];
     UINavigationController *mineVC = [mineStoryboard instantiateInitialViewController];
-    
-    mineVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"我的"
-                                                     image:[UIImage imageNamed:@"icon_个人中心_选中"]
-                                             selectedImage:nil];
-    mineVC.tabBarItem.image = [[UIImage imageNamed:@"icon_个人中心"]
-                               imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    mineVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_个人中心_选中"]
-                                       imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    mineVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"我的" image:[UIImage imageNamed:@"tab-me-pre"] selectedImage:nil];
+    mineVC.tabBarItem.image = [[UIImage imageNamed:@"tab-me-nor"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    mineVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab-me-pre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     self.viewControllers = @[homeVC,meetingVC,mineVC];
-    
-    self.navigationController.navigationBar.barTintColor =  MenuColor;
+  
     //顶部导航栏颜色
-
+    //self.navigationController.navigationBar.barTintColor =  MenuColor;
+    
     //选中字体颜色
-    [self.navigationController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:MenuColor} forState:UIControlStateSelected];
-     meetingVC.tabBarController.tabBar.tintColor = MenuColor;
-     mineVC.tabBarController.tabBar.tintColor = MenuColor;
-     homeVC.tabBarController.tabBar.tintColor = MenuColor;
+     [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10], NSForegroundColorAttributeName:Color(252, 88, 90)} forState:UIControlStateSelected];
+    //[self.navigationController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:Color(252, 88, 90)} forState:UIControlStateSelected];
+     //meetingVC.tabBarController.tabBar.tintColor = MenuColor;
+     //mineVC.tabBarController.tabBar.tintColor = MenuColor;
+     //homeVC.tabBarController.tabBar.tintColor = MenuColor;
     
 }
 
@@ -100,10 +84,9 @@
     // Pass the selected object to the new view controller.
 }
 */
-#pragma mark -
-
 @end
 
+#pragma mark -
 @implementation MainViewControllerDelegate
 
 + (MainViewControllerDelegate *)staticInstance {
