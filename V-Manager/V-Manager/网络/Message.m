@@ -16,6 +16,7 @@
     self = [super init];
     if ( self ) {
 		self.context = [NSMutableDictionary new];
+        self.contextContent= [NSMutableDictionary new];
     }
     return self;
 }
@@ -26,7 +27,8 @@
                                           		 options:NSJSONReadingMutableContainers
                                       			   error:nil];
 	if ([jsonObj isKindOfClass:[NSMutableDictionary class]]) {
-		self.context = (NSMutableDictionary*)jsonObj;
+		self.contextContent = (NSMutableDictionary*)jsonObj;
+         self.context=[self.contextContent valueForKey: C_DATA];
 	} else {
 		NSAssert1(NO, @"不正确的Json:%@", message);
 	}

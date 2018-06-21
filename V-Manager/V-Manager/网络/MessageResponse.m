@@ -36,21 +36,21 @@
 }
 
 -(void)setCode:(int)value {
-    self.context[C_CODE] = [NSNumber numberWithInt: value];
+    self.contextContent[C_CODE] = [NSNumber numberWithInt: value];
 }
 -(int)code{
-    NSNumber *value = self.context[C_CODE];
+    NSNumber *value = self.contextContent[C_CODE];
     return [value intValue];
 }
 
 -(void)setMessage:(NSString*)value {
-    self.context[C_MESSAGE] = value;
+    self.contextContent[C_MESSAGE] = value;
 }
 
 
 
 -(NSString*)message {
-    return self.context[C_MESSAGE];
+    return self.contextContent[C_MESSAGE];
 }
 
 

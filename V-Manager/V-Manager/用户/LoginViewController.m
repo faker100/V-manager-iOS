@@ -21,6 +21,10 @@
  
     // Do any additional setup after loading the view.
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +45,14 @@
 {
     self.mobileTextField.text=@"13800138000";
     self.passWordTextField.text=@"111111";
+    
+    UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT)];
+    
+    [bgImgView  setImage:[UIImage imageNamed:@"0.jpeg"]];
+    
+    [self.view addSubview:bgImgView];
+    
+    [self.view  sendSubviewToBack:bgImgView];
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender
@@ -82,6 +94,7 @@
          }
          
          LoginResponse *res = (LoginResponse *)messageResponse;
+         NSString * nickName=res.nickName;
 //         self.userInfo.nickName=res.nickName;
 //         self.userInfo.headImgUrl=res.headImgUrl;
 //         self.userInfo.token=res.token;
@@ -89,6 +102,7 @@
 //         AppDelegate *appDelegate = [AppDelegate instance];
 //         [appDelegate.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 //         [appDelegate resetApplication];
+         [self showToastMessage:[NSString stringWithFormat:@"%@:%@:%@",res.nickName,res.positionName,res.iconUrl]];
          
      }];
 }
